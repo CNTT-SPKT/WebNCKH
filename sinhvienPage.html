@@ -12,27 +12,23 @@
 <script type="text/javascript" src="1.js"></script>
 
 <script type="text/javascript">
-// $function getInfo()
-// {
-// 	var f=document.doipass;
-// 	if(f.pass.value="")
-// 	{
-// 		document.getElementById("pass-error").style.display='block';
-// 		document.getElementById("pass-error").innnerHTML="Nhập lại mật khẩu!";
-// 		f.pass.focus();
-// 		return false;
-// 	}
-// 	else
-// 		document.getElementById("pass-error").style.display='none';
-// 	return true;
-// };
-// $(document).ready(function(){
-// 		$("#btnsubmit").click(function(){
-// 			alert('Gửi đơn đăng ký thành công!');
-
-// 		});
-
-// });
+$function getInfo()
+{
+	var f=document.doipass;
+	if(f.pass.value="")
+	{
+		document.getElementById("pass-error").style.display='block';
+		document.getElementById("pass-error").innnerHTML="Nhập lại mật khẩu!";
+		f.pass.focus();
+		return false;
+	}
+	return true;
+};
+$(document).ready(function(){
+		$("#btnsubmit").click(function(){
+			alert('Gửi đơn đăng ký thành công!');
+		});
+});
 </script>
 </head>
 <body >
@@ -64,7 +60,7 @@
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="#"><span  style="color:blue">Sinh Viên A</span></a></li>
-										<li><a href="mainPage.html">Đăng xuất</a></li>
+									<li><a href="mainPage.html">Đăng xuất</a></li>
 								</ul>
 							</div><!-- /.navbar-collapse -->
 						</div>
@@ -396,7 +392,7 @@
 														</div>
 
 														<div id="guidon" style="position:absolute;right:40%;bottom:-40px">
-															<button type="submit" id="btnsubmit" style="color: #fff;background-color: #286090;border-color: #204d74; height:30px;width:150px;background-image: none;border: 1px solid transparent;border-radius: 4px; margin:auto;">Gửi đơn đăng ký</button>
+															<button type="submit" id="svPage_GuiDonDK" style="color: #fff;background-color: #286090;border-color: #204d74; height:30px;width:150px;background-image: none;border: 1px solid transparent;border-radius: 4px; margin:auto;">Gửi đơn đăng ký</button>
 															
 														</div>
 													</div>

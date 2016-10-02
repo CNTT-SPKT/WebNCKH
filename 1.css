@@ -200,9 +200,6 @@ footer{
 .svdkDeTai.row{
     padding-top: 100px;
 }
-input#input {
-    width: 100px;
-}
 button.btn.btn-xs.btn-default {
     height: 40px;
     width: 100px;
@@ -214,9 +211,6 @@ input#tt {
 }
 .tab-content{
     margin-right: 0px;
-}
-.error{
-    display: none;
 }
 /*back to top*/
  #bttop {

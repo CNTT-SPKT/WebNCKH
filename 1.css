@@ -1,0 +1,220 @@
+*{margin: 0;
+    padding:  0}
+
+div#menuMain {
+    margin-right: 5px;
+}
+
+a.btn.btn-danger {
+    margin-left: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.linhvucnghiencuu {
+    margin-top: 6px;
+}
+
+/*button.btn.btn-info {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}*/
+
+img.img-responsive {
+    min-width: 333px;
+}
+
+.thongqua, .khenthuong {
+    height: 200px;
+}
+
+.noidung ul.list-group {position: absolute;width: 100%;top: 25%;left: 0;}
+
+.thongqua, .khenthuong {
+    padding: 5px;
+    border: 1px solid white;
+    position: relative;
+}
+
+h4 {
+    position: absolute;
+    color: white;
+    left: 20%;
+}
+
+.hinh_tq_kt {
+    position: absolute;
+    z-index: 2;
+    left: -10px;
+    top: 5px;
+}
+
+.noidung {
+    margin: 20px;
+}
+.menu{
+    width: 100%;
+    height: 220px;
+}
+.page{
+    padding-left: 150px;
+    padding-right: 150px;
+    background: powderblue;
+}
+.pictureMain{
+    background: white;
+    margin: 15px;
+    margin-top: 6px;
+}
+.menuBar{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#container_menuBar{
+    padding-left: 0px;
+    width:1075px;
+    padding-right: 50px;
+}
+.slide{
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.item{
+    max-height: 300px;
+}
+.detaiTQ{
+    height: 500px;
+    border-radius: 3px;
+    border: 2px solid white;
+    margin-top: 8px;
+}
+.detaiDK{
+    margin-top: 8px;
+    border: 2px solid white;
+    border-radius: 3px;
+    height: 500px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+        margin-right: -22px;
+}
+.list_detaikt{
+        margin-top: -31px;
+}
+.thongbao{
+    border: 2px solid white;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+.loginPage{
+    background: white;
+    height: 500px;
+}
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 20px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    /*display: block;*/
+
+}
+.profile-img
+{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+.remember{
+        margin-left: 18px;
+}
+.content {
+    height: 70%;
+}
+footer{
+    text-align: center;
+}
+.svdkDeTai.row{
+    padding-top: 100px;
+}
+input#input {
+    width: 100px;
+}
+button.btn.btn-xs.btn-default {
+    height: 40px;
+    width: 100px;
+    margin-left: 200px;
+    margin-top: 30px;
+}
+input#tt {
+    width: 200px;
+}
+.tab-content{
+    margin-right: 0px;
+}
+.error{
+    display: none;
+}

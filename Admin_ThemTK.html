@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title> Example </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<script type="text/javascript" src="vendor/bootstrap.js"></script>
+<script type="text/javascript" src="1.js"></script>
+<link rel="stylesheet" href="vendor/bootstrap.css">
+<link rel="stylesheet" href="1.css">
+<link rel="stylesheet" href="vendor/font-awesome.css">
+</head>
+<body >
+	<div class="page">
+		<div class="menu">
+			<div class="row">
+				<div class="pictureMain">
+					<img src="images/skpt_banner_2.jpg" class="img-responsive" alt="Image">
+				</div>
+				<div class="menuBar">
+					<nav class="navbar navbar-default " role="navigation">
+						<div class="container" id="container_menuBar">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse navbar-ex1-collapse" id="menuMain">
+								<ul class="nav navbar-nav">
+									<li><a href="#">Trang chủ</a></li>
+									<li><a href="#">Biểu Mẫu</a></li>
+									<li><a href="#">Liên Hệ</a></li>
+									<li><a href="#">Hướng dẫn</a></li>
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="#"><span  style="color:blue">Admin</span></a></li>
+									<li><a href="mainPage.html">Đăng xuất</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div>
+					</nav>
+				</div>
+			</div>	
+		</div>
+		<div class="svContent">
+			<div class="row">
+				<div class="col-md-2">
+					<ul class="nav nav-pills nav-stacked"  style="background:white;border-radius:3px">
+						<li class="active"><a href="#QLTK" data-toggle="pill">Quản lý tài khoản</a></li>
+						
+					</ul>
+
+				</div>
+				<div class="col-md-10">
+					<div class="tab-content">
+						<div class="tab-pane active" id="QLTK"  >
+							<div class="row">
+								<div class="ThemTK" style="background:white;height:500px;margin-right:15px;border-radius:3px">
+									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">QUẢN LÝ NGƯỜI DÙNG</h2>
+									<hr>
+									<div class="Ad_table_TTK">
+										<div class="row">
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<form action="" style="margin:15px 10px 30px 30px;">
+													<div class="col-xs-10">
+														<label for="ex1">Họ tên<span>:</span></label> 
+														<input class="form-control" id="ex1" type="text">
+													</div><br>
+													<div class="col-xs-10">
+														<label for="name">Email<span>:</span></label> 
+														<input class="form-control" id="ex2" type="text">
+													</div><br>
+													<div class="col-xs-10">
+														<label for="menu">Quyền<span>:</span> </label>
+														<select id="menu" class="form-control">
+														<option value="0" selected>(please select:)</option>
+														<option value="1">Admin</option>
+														<option value="2">Giảng viên</option>
+														<option value="3">Sinh viên</option>
+														<option value="3">Quản lý</option>
+														</select>
+													</div><br>
+													<div class="col-xs-10">
+														<label for="ex3">Tài khoản<span>:</span></label>
+														<input class="form-control" id="ex3" type="text">
+													</div><br>
+												</form>
+											</div>
+											<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+												<form action=""style="margin:15px 0px 30px 30px;">
+													<div class="col-xs-10">
+														<label for="ex4">Mật khẩu<span>:</span></label> 
+														<input class="form-control" id="ex4" type="text">
+													</div><br>
+													<div class="col-xs-10">
+														<label for="ex5">Mã số<span>:</span></label> 
+														<input class="form-control" id="ex5" type="text">
+													</div><br>
+													<div class="col-xs-10">
+														<label for="ex6">Ngành<span>:</span></label>
+														<input class="form-control" id="ex6" type="text">
+													</div><br>
+													<a class="btn btn-default" href="Admin_TTKTuFILE.html" role="button" style="
+									margin:25px 0px 5px 15px; width:300px;">Thêm tài khoản từ file</a>
+												</form>
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn btn-info" style="margin: 10px 0px 0px 350px; width:150px;">Thêm</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-body">
+			Copyright@Lâm Xuân Triết
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

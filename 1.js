@@ -46,7 +46,7 @@ $(document).ready(function(){
 /*back to top*/
 $(function(){
 	$(window).scroll(function()
-		{if( $(this).scrollTop()>=10)
+		{if( $(this).scrollTop()>=200) //keo xuong qua 200 thi hien
 			{
 				$('#bttop').fadeIn();
 			}
@@ -77,3 +77,4 @@ $(document).ready(function(){
         $("#dt3").slideToggle("slow");
     });
 });
+/*menu fixed*/

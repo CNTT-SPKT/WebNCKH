@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<title> Example </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">  
-<script type="text/javascript" src="vendor/bootstrap.js"></script>
-<script type="text/javascript" src="1.js"></script>
-<link rel="stylesheet" href="vendor/bootstrap.css">
-<link rel="stylesheet" href="1.css">
-<link rel="stylesheet" href="vendor/font-awesome.css">
+<html lang="en">
+
+<head>
+	<title> Example </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="1.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="1.css">
+	<link rel="stylesheet" href="vendor/font-awesome.css">
 </head>
-<body >
+
+<body>
 	<div class="page">
 		<div class="menu">
 			<div class="row">
@@ -38,29 +41,32 @@
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="#"><span  style="color:blue">Sinh Viên A</span></a></li>
-										<li><a href="mainPage.html">Đăng xuất</a></li>
+									<li><a href="mainPage.html">Đăng xuất</a></li>
 								</ul>
-							</div><!-- /.navbar-collapse -->
+							</div>
+							<!-- /.navbar-collapse -->
 						</div>
 					</nav>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<div class="svContent">
 			<div class="row">
 				<div class="col-md-2">
-					<ul class="nav nav-pills nav-stacked"  style="background:white;border-radius:3px">
+					<ul class="nav nav-pills nav-stacked" style="background:white;border-radius:3px">
 						<li><a href="#thongbao" data-toggle="pill">Thông báo</a></li>
 						<li><a href="#dsDeTai" data-toggle="pill">Danh sách đề tài</a></li>
-						<li><a href="#dkDeTai" data-toggle="pill"></i>Đăng ký đề tài NCKH</a></li>
+						<li>
+							<a href="#dkDeTai" data-toggle="pill"></i>Đăng ký đề tài NCKH</a>
+						</li>
 						<li><a href="#kqNghiemThu" data-toggle="pill">Kết quả nghiệm thu</a></li>
 						<li><a href="#ttTaiKhoan" data-toggle="pill"> Thông tin tài khoản</a></li>
 					</ul>
 				</div>
 				<div class="col-md-10">
 					<div class="tab-content">
-						
-						<div class="tab-pane active" id="GHDT" >
+
+						<div class="tab-pane active" id="GHDT">
 							<div class="row">
 								<div class="QLyTK" style="background:white;height:400px;margin-right:15px;border-radius:3px">
 									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">GIA HẠN ĐỀ TÀI</h2>
@@ -72,8 +78,8 @@
 													<th>Mã đề tài</th>
 													<th>Tên đề tài</th>
 													<th>Ngày đăng ký</th>
-													<th>Hạn nghiệm thu</th>	
-													<th>Trạng thái</th>	
+													<th>Hạn nghiệm thu</th>
+													<th>Trạng thái</th>
 
 												</tr>
 											</thead>
@@ -99,13 +105,13 @@
 									<div class="col-sm-12">
 										<textarea name="" id="mota" class="form-control" rows="3" required="required"></textarea>
 									</div>
-									<label class="col-sm-2 control-label" for="GiaHan"style="float:left; margin-left:10px; margin-top:10px;">Gia hạn đến ngày:</label>
+									<label class="col-sm-2 control-label" for="GiaHan" style="float:left; margin-left:10px; margin-top:10px;">Gia hạn đến ngày:</label>
 									<div class="col-sm-4">
-										<input type="date" name="" id="GiaHan" class="form-control" value="" required="required" title=""style="float:left; margin-left:10px; margin-top:10px;"></div>
-										<a class="btn btn-info" href="sinhvien_guidonhuy.html" role="button" style="float:right; margin-right:10px; margin-top:10px;">Gửi đơn</a>
-									</div>
+										<input type="date" name="" id="GiaHan" class="form-control" value="" required="required" title="" style="float:left; margin-left:10px; margin-top:10px;"></div>
+									<a class="btn btn-info" href="sinhvien_guidonhuy.html" role="button" style="float:right; margin-right:10px; margin-top:10px;">Gửi đơn</a>
 								</div>
 							</div>
+						</div>
 						<div class="tab-pane" id="thongbao">
 							<div class="row">
 								<div class="svThongBao" style="background:white;height:400px;margin-right:15px;border-radius:3px">
@@ -118,7 +124,7 @@
 													<th><input type="checkbox" name="" id="selectAll_ThongBao" value=""></th>
 													<th>Thông báo</th>
 													<th>Người gửi</th>
-													<th>Ngày gửi</th>	
+													<th>Ngày gửi</th>
 													<th>Chi tiết thông báo</th>
 												</tr>
 											</thead>
@@ -163,7 +169,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="tab-pane" id="dsDeTai"  >
+						<div class="tab-pane" id="dsDeTai">
 							<div class="row">
 								<div class="svdsDeTai" style="background:white;height:400px;margin-right:15px;border-radius:3px">
 									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">DANH SÁCH ĐỀ TÀI</h2>
@@ -173,7 +179,7 @@
 												<tr class="success">
 													<th>Mã số</th>
 													<th>Tên đề tài</th>
-													<th>Ngày đăng ký</th>	
+													<th>Ngày đăng ký</th>
 													<th>Hạn nghiệm thu</th>
 													<th>Trạng thái</th>
 													<th>Chi tiết</th>
@@ -223,7 +229,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="tab-pane" id="dkDeTai" >
+						<div class="tab-pane" id="dkDeTai">
 							<div class="svdkDeTai" style="background:white;height:1400px;border-radius:3px">
 								<h2 style="margin-top:0px;padding:10px;font-family:sans-serif">ĐĂNG KÝ ĐỀ TÀI</h2>
 								<a class="btn btn-info" href="sinhvien_DeTaiDeXuat.html" role="button" style="position:absolute;right:50px;top:10px;">Đăng ký đề tài được đề xuất</a>
@@ -376,7 +382,7 @@
 														</div>
 
 														<label class="col-sm-2 control-label" for="mota">Phương pháp và phạm vi nghiên cứu:</label>
-														<div class="col-sm-10" style="margin-bottom:5px" >
+														<div class="col-sm-10" style="margin-bottom:5px">
 															<textarea name="" id="mota" class="form-control" rows="3" required="required"></textarea>
 														</div>
 
@@ -420,7 +426,7 @@
 															<button type="submit" class="btn btn-primary" style="margin:auto">Gửi đơn đăng ký</button>
 														</div>
 													</div>
-												</div>
+											</div>
 											</form>
 										</div>
 									</div>
@@ -437,7 +443,7 @@
 												<tr class="success">
 													<th>Mã số đề tài</th>
 													<th>Tên đề tài</th>
-													<th>Ngày đăng ký</th>	
+													<th>Ngày đăng ký</th>
 													<th>Ngày nghiệm thu</th>
 													<th>Kết quả chi tiết</th>
 												</tr>
@@ -456,7 +462,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="tab-pane" id="ttTaiKhoan" >
+						<div class="tab-pane" id="ttTaiKhoan">
 							<div class="row">
 								<div class="svttTaiKhoan" style="background:white;height:400px;margin-right:15px;border-radius:3px">
 									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">THÔNG TIN TÀI KHOẢN</h2>
@@ -490,7 +496,7 @@
 													</b>
 												</div>
 											</div>
-											<div class="row" >
+											<div class="row">
 												<div class="container">
 													<a class="btn btn-warning" data-toggle="modal" href='#modal-id'>Đổi mật khẩu</a>
 													<div class="modal fade" id="modal-id">
@@ -506,7 +512,7 @@
 																		<hr>
 																	</div>
 																	<div class="doi">
-																		<form action="" onsubmit="return getInfo();" name="doipass" method="POST" class="form-horizontal" role="form" >
+																		<form action="" onsubmit="return getInfo();" name="doipass" method="POST" class="form-horizontal" role="form">
 																			<div class="form-group">
 																				<label for="input" class="col-sm-5 control-label">Mật khẩu cũ:</label>
 																				<div class="col-sm-7">
@@ -531,7 +537,7 @@
 																		</form>
 																	</div>
 																</div>
-																
+
 															</div>
 														</div>
 													</div>
@@ -548,6 +554,9 @@
 			</div>
 		</div>
 	</div>
+	<div id='bttop'>
+		<img src="images/backtotop.png" alt="backtotop" width="50px" height="50px">
+	</div>
 	<footer>
 
 		<pre>Copyright@ Phòng nghiên cứu khoa học và quan hệ quốc tế
@@ -555,4 +564,5 @@
 
 	</footer>
 </body>
+
 </html>

@@ -44,20 +44,18 @@ $function Remove(){
 		$('input[type="checkbox"]', $(this).parent('div')).attr('checked', status);
 		});
 }
-/*end back to top*/
+/*back to top*/
+$(function(){
+$(window).scroll(function()
+{if( $(this).scrollTop()>=10)
+{
+$('#bttop').fadeIn();
+}
+else
+{
+$('#bttop').fadeOut();
+}});
+$('#bttop').click(function(){
+$('body,html').animate({scrollTop:0},600);});});
 
-$(document).ready(function($) {    
-  //selector đến menu cần làm việc
-  var TopFixMenu = $("#menuMain");
-  // dùng sự kiện cuộn chuột để bắt thông tin đã cuộn được chiều dài là bao nhiêu.
-    $(window).scroll(function(){
-    // Nếu cuộn được hơn 150px rồi
-        if($(this).scrollTop()>100){
-      // Tiến hành show menu ra    
-        TopFixMenu.show();
-        }else{
-      // Ngược lại, nhỏ hơn 150px thì hide menu đi.
-            TopFixMenu.hide();
-        }}
-    )
-})
+/*end back to top*/

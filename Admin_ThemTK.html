@@ -3,11 +3,21 @@
 <title> Example </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">  
-<script type="text/javascript" src="vendor/bootstrap.js"></script>
-<script type="text/javascript" src="1.js"></script>
 <link rel="stylesheet" href="vendor/bootstrap.css">
 <link rel="stylesheet" href="1.css">
 <link rel="stylesheet" href="vendor/font-awesome.css">
+<script type="text/javascript" src="vendor/bootstrap.js"></script>
+<script type="text/javascript" src="1.js"></script>
+<script type="text/javascript" src="1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $("#ex1,#ex2,#ex3,#ex4,#ex5,#ex6,#sl_menu").mouseenter(function(){
+        $("#ex1,#ex2,#ex3,#ex4,#ex5,#ex6,#sl_menu").css("background-color","#ECECEC" );
+    });
+    $("#ex1,#ex2,#ex3,#ex4,#ex5,#ex6,#sl_menu").mouseleave(function(){
+        $("#ex1,#ex2,#ex3,#ex4,#ex5,#ex6,#sl_menu").css("background-color", "#FFFFFF");
+    });
+});</script>
 </head>
 <body >
 	<div class="page">
@@ -50,16 +60,73 @@
 			<div class="row">
 				<div class="col-md-2">
 					<ul class="nav nav-pills nav-stacked"  style="background:white;border-radius:3px">
-						<li class="active"><a href="#QLTK" data-toggle="pill">Quản lý tài khoản</a></li>
+						<li><a href="#QLTK" data-toggle="pill">Quản lý tài khoản</a></li>
 						
 					</ul>
 
 				</div>
 				<div class="col-md-10">
 					<div class="tab-content">
-						<div class="tab-pane active" id="QLTK"  >
+						<div class="tab-pane" id="QLTK"  >
 							<div class="row">
-								<div class="ThemTK" style="background:white;height:500px;margin-right:15px;border-radius:3px">
+								<div class="QLyTK" style="background:white;height:400px;margin-right:15px;border-radius:3px">
+									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">QUẢN LÝ TÀI KHOẢN</h2>
+									<a class="btn btn-default" href="Admin_ThemTK.html" role="button" style="float:right;
+									margin:0px 5px 5px 0px;">Thêm tài khoản</a>
+									<div class="ad_table_qltk">
+										<table class="table table-striped table-hover" style="margin:0px 5px 0px 0px;">
+											<thead class="thead-default">
+												<tr class="success">
+													<th><input type="checkbox" name="" id="input" value=""></th>
+													<th>Tên tài khoản</th>
+													<th>Mã số</th>
+													<th>Tài khoản</th>	
+													<th>Quyền truy cập</th>
+													<th>Ngành</th>
+													<th>Chỉnh sửa</th>
+													<th>Xóa </th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th><input type="checkbox" name="" id="input" value=""></th>
+													<td> Lâm Xuân Triết</td>
+													<td>123</td>
+													<td>Admin</td>
+													<td>Admin</td>
+													<td>CNTT</td>
+													<td><a href="">Cập nhập</a></td>
+													<td><a href="">Xóa</a></td>
+												</tr>
+												<tr>
+													<th><input type="checkbox" name="" id="input" value=""></th>
+													<td>Lê Thị Thảo/td>
+													<td>124</td>
+													<td>SinhVien1</td>
+													<td>SinhVien</td>
+													<td>CKM</td>
+													<td><a href="">Cập nhập</a></td>
+													<td><a href="">Xóa</a></td>
+												</tr>
+												<tr>
+													<th><input type="checkbox" name="" id="input" value=""></th>
+													<td>Tín Trương</td>
+													<td>141 </td>
+													<td>SinhVien2</td>
+													<td>SinhVien</td>
+													<td>CNTT</td>
+													<td><a href="">Cập nhập</a></td>
+													<td><a href="">Xóa</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane active" id="ThemTK"  >
+							<div class="row">
+								<div class="ad_TTK" style="background:white;height:500px;margin-right:15px;border-radius:3px">
 									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">QUẢN LÝ NGƯỜI DÙNG</h2>
 									<hr>
 									<div class="Ad_table_TTK">
@@ -75,8 +142,8 @@
 														<input class="form-control" id="ex2" type="text">
 													</div><br>
 													<div class="col-xs-10">
-														<label for="menu">Quyền<span>:</span> </label>
-														<select id="menu" class="form-control">
+														<label for="sl_menu">Quyền<span>:</span> </label>
+														<select id="sl_menu" class="form-control">
 														<option value="0" selected>(please select:)</option>
 														<option value="1">Admin</option>
 														<option value="2">Giảng viên</option>

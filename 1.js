@@ -77,4 +77,14 @@ $(document).ready(function(){
         $("#dt3").slideToggle("slow");
     });
 });
-/*menu fixed*/
+
+/*animate thong bao main bounceIn*/
+
+$(document).ready(function(){
+	$('.ltbao').hover(function(){
+		$(this).addClass("animated bounceIn").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+				$(this).removeClass("animated bounceIn")
+		})
+	})
+
+});

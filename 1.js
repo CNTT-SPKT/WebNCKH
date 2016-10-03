@@ -88,3 +88,6 @@ $(document).ready(function(){
 	})
 
 });
+
+/* Login Check input*/
+/*End*/

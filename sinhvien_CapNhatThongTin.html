@@ -84,14 +84,13 @@
 												</form>
 											</div>
 										</div>
-										<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+										<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="margin-top:15px;">
 											<div class="row">
 												<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-													<br><br>
-													<b><p>Tên chủ nhiệm: Sinh Viên A</p>
-														<p>MSSV: 14110208</p>
-														<p>Ngày sinh: 02/08/1996</p>
-														<p>Thuộc khoa: CNTT</p>
+													<b><p>Tên chủ nhiệm: Sinh Viên A</p><br>
+														<p>MSSV: 14110208</p><br>
+														<p>Ngày sinh: 02/08/1996</p><br>
+														<p>Thuộc khoa: CNTT</p><br>
 														<p>Quê quán: Quảng Ngãi</p>
 													</b>
 												</div>
@@ -100,7 +99,7 @@
 														<div class="form-group">
 															<label for="input" class="col-sm-5 control-label">Mail:</label>
 															<div class="col-sm-7">
-																<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="" style="width:150px;margin-bottom:10px">
+																<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="" style="width:150px;margin-bottom:10px;" >
 															</div>
 															<label for="input" class="col-sm-5 control-label">Số điện thoại:</label>
 															<div class="col-sm-7">
@@ -120,8 +119,8 @@
 											</div>
 											<div class="row" style="margin-left:200px">
 												<div class="container">
-													<a class="btn btn-info col-sm-6" style="width:100px" href="sinhvien_CapNhatThongTin.html" role="button">Cập nhật</a>
-													<a class="btn btn-danger col-sm-6" style="width:100px" href="sinhvienPage.html" role="button">Hủy</a>
+													<a class="btn btn-info col-sm-6" style="width:100px; margin-right:10px" href="sinhvien_CapNhatThongTin.html" role="button">Cập nhật</a>
+													<a class="btn btn-danger col-sm-6" style="width:100px;" href="sinhvienPage.html" role="button">Hủy</a>
 												</div>
 											</div>
 										</div>
@@ -134,7 +133,6 @@
 								<div class="svThongBao" style="background:white;height:500px;margin-right:15px;border-radius:3px">
 									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">THÔNG BÁO</h2>
 									<div class="sv_table_thongbao">
-										<a class="btn btn-danger" href="#" id="btn_Xoa" role="button">Xóa thông báo</a>
 										<table class="table table-striped table-hover">
 											<thead class="thead-default">
 												<tr class="success">
@@ -204,6 +202,8 @@
 										});
 										</script>
 									</div>
+									<button type="button" class="btn btn-danger" id="btn_Xoa" style="float:right; margin-right:10px">
+										<span class="glyphicon glyphicon-trash"></span> Xóa thông báo</button>
 								</div>
 							</div>
 						</div>
@@ -259,8 +259,8 @@
 											</tbody>
 										</table>
 										<ul id="contextMenu" class="dropdown-menu" role="menu">
-											<li><a tabindex="-1" href="sinhvien_GiaHanDT.html" class="payLink">Gia Hạn</a></li>
-											<li><a tabindex="-1" href="sinhvien_LyDoHyGHDT.html" class="delLink">Hủy</a></li>
+											<li><a tabindex="-1" href="sinhvien_GiaHanDT.html" >Gia Hạn</a></li>
+											<li><a tabindex="-1" href="sinhvien_LyDoHyGHDT.html">Hủy</a></li>
 										</ul>
 									</div>
 

@@ -78,7 +78,7 @@
 								<div class="svThongBao" style="background:white;height:400px;margin-right:15px;border-radius:3px">
 									<h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">THÔNG BÁO</h2>
 									<div class="sv_table_thongbao">
-										<a class="btn btn-danger" href="#" role="button">Xóa thông báo</a>
+										<a class="btn btn-danger" href="#" id="btn_Xoa" role="button">Xóa thông báo</a>
 										<table class="table table-striped table-hover">
 											<thead class="thead-default">
 												<tr class="success">
@@ -90,22 +90,22 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td><input type="checkbox" name="" id="input" value=""></td>
+												<tr id="tr1">
+													<td><input type="checkbox" name="" id="select1" checkboxid="tr1" value=""></td>
 													<td>Thông báo đề tài gần hết hạn</td>
 													<td>Phòng NCKH</td>
 													<td>12/12/2012</td>
 													<td><a href="sinvien_XemThongBao.html">Xem</a></td>
 												</tr>
-												<tr>
-													<td><input type="checkbox" name="" id="input" value=""></td>
+												<tr id="tr2">
+													<td><input type="checkbox" name="" id="select2" checkboxid="tr2" value=""></td>
 													<td>Thông báo đề tài được duyệt</td>
 													<td>Phòng NCKH</td>
 													<td>12/12/2012</td>
 													<td><a href="sinvien_XemThongBao.html">Xem</a></td>
 												</tr>
-												<tr>
-													<td><input type="checkbox" name="" id="input" value=""></td>
+												<tr id="tr3">
+													<td><input type="checkbox" name="" id="select3" checkboxid="tr3" value=""></td>
 													<td>Thông báo đề tài được duyệt</td>
 													<td>Phòng NCKH</td>
 													<td>12/12/2012</td>
@@ -124,6 +124,27 @@
 													$(this).prop('checked', false);
 												});
 											}
+										});
+										$(function() {
+											$("#btn_Xoa").on("click", function() {
+												var rowCount = $('tbody input').length;
+												var i=0;
+												var temp=0;
+												for(i;i<rowCount;i++)
+												{
+													if($('tbody input').eq(i).is(":checked"))
+													{
+														var x=$('tbody input').eq(i).attr("checkboxid");
+														$("#"+x).hide(2000);              
+														temp++;
+													}
+												}
+												if(temp!=0)
+												{
+													setTimeout(function () {
+														alert('Xóa thành công')}, 2000);
+												}
+											});
 										});
 										</script>
 									</div>

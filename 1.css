@@ -2,7 +2,10 @@
     padding:  0}
 
 div#menuMain {
-    margin-right: 5px;
+    margin-right: 60px;
+}
+.container{
+    width: 800px;
 }
 
 a.btn.btn-danger {
@@ -15,11 +18,11 @@ a.btn.btn-danger {
     margin-top: 6px;
 }
 
-/*button.btn.btn-info {
+button.btn.btn-info {
     position: absolute;
     right: 25px;
     top: 15px;
-}*/
+}
 
 img.img-responsive {
     min-width: 333px;

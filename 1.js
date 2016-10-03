@@ -66,17 +66,17 @@ $(document).ready(function(){
 		$(this).css("background-color", "#FFFFFF");
 	});
 });
-$(document).ready(function(){
-	$("#main_dtkt1").click(function(){
-        $("#dt1").slideToggle("slow");
-    });
-    $("#main_dtkt2").click(function(){
-        $("#dt2").slideToggle("slow");
-    });
-    $("#main_dtkt3").click(function(){
-        $("#dt3").slideToggle("slow");
-    });
-});
+// $(document).ready(function(){
+// 	$("#main_dtkt1").click(function(){
+//         $("#dt1").slideToggle("slow");
+//     });
+//     $("#main_dtkt2").click(function(){
+//         $("#dt2").slideToggle("slow");
+//     });
+//     $("#main_dtkt3").click(function(){
+//         $("#dt3").slideToggle("slow");
+//     });
+// });
 
 /*animate thong bao main bounceIn*/
 

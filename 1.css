@@ -60,7 +60,7 @@ h4 {
 .page{
     padding-left: 150px;
     padding-right: 150px;
-    background: powderblue;
+    background-image: url("images/background.jpg");
 }
 .pictureMain{
     background: white;

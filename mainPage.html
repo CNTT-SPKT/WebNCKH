@@ -9,6 +9,14 @@
 	<script type="text/javascript" src="1.js"></script>
 	<link rel="stylesheet" href="vendor/bootstrap.css">
 	<link rel="stylesheet" href="1.css">
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$("#bieumau").click(function(){
+		$("#mainP").load("BieuMau.html")
+	});
+
+});
+</script>
 </head>
 
 <body>
@@ -34,7 +42,7 @@
 							<div class="collapse navbar-collapse navbar-ex1-collapse" id="menuMain">
 								<ul class="nav navbar-nav">
 									<li><a href="#">Trang chủ</a></li>
-									<li><a href="#">Biểu Mẫu</a></li>
+									<li><a id="bieumau" href="#">Biểu Mẫu</a></li>
 									<li><a href="#">Liên Hệ</a></li>
 									<li><a href="#">Hướng dẫn</a></li>
 								</ul>
@@ -49,7 +57,7 @@
 			</div>
 		</div>
 		<div class="content">
-			<div class="row">
+			<div class="row" id="mainP">
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 					<div class="row">
 						<div class="slide">

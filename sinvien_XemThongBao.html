@@ -70,23 +70,11 @@
 						<div class="tab-pane active" id="xemthongbao">
 							<div class="row">
 								<div class="svThongBao" style="background:white;height:500px;margin-right:15px;border-radius:3px">
-									<h2 class="tieude_theh">THÔNG BÁO</h2>
+									<h2 class="tieude_theh">THÔNG BÁO</h2><hr>
 									<div class="sv_table_thongbao">
 										
 										<textarea rows="5" cols="100" style="margin:30px 0px 0px 50px;width:90%">  Đề tài xây dựng web quản lý bán hàng sẽ hết hạn vào ngày 2/9/2013...</textarea><br>
-										<script>
-										$('#selectAll_ThongBao').change(function(){
-											if($(this).prop('checked')){
-												$('tbody tr td input[type="checkbox"]').each(function(){
-													$(this).prop('checked', true);
-												});
-											}else{
-												$('tbody tr td input[type="checkbox"]').each(function(){
-													$(this).prop('checked', false);
-												});
-											}
-										});
-										</script>
+										
 									</div>
 								</div>
 							</div>
@@ -180,7 +168,7 @@
 												<tr class="success">
 													<th>Mã số</th>
 													<th>Tên đề tài</th>
-													<th>Ngày đăng ký</th>
+													<th>Ngày đăng ký</th>	
 													<th>Hạn nghiệm thu</th>
 													<th>Trạng thái</th>
 													<th>Chi tiết</th>
@@ -197,7 +185,7 @@
 													<td>Đang chờ duyệt</td>
 													<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
 													<td><a href="sinhvien_NopBaoCao.html"><span style="color:gray">Nộp</span></a></td>
-													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled> Action </a></td>
+													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled=""> Action </a></td>
 												</tr>
 												<tr>
 													<td>141</td>
@@ -217,16 +205,15 @@
 													<td>Đã nghiệm thu</td>
 													<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
 													<td><a href="sinhvien_NopBaoCao.html"><span style="color:gray">Nộp</span></a></td>
-													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled> Action </a></td>
+													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled=""> Action </a></td>
 												</tr>
 											</tbody>
 										</table>
 										<ul id="contextMenu" class="dropdown-menu" role="menu">
-											<li><a tabindex="-1" href="sinhvien_GiaHanDT.html" >Gia Hạn</a></li>
+											<li><a tabindex="-1" href="sinhvien_GiaHanDT.html">Gia Hạn</a></li>
 											<li><a tabindex="-1" href="sinhvien_LyDoHyGHDT.html">Hủy</a></li>
 										</ul>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -535,7 +522,61 @@
 															</div>
 														</div>
 													</div>
-													<a class="btn btn-info" href="sinhvien_CapNhatThongTin.html" style="margin-top:40px; margin-left:30px;" role="button">Cập nhật thông tin</a>
+													<a class="btn btn-info" data-toggle="modal" href="#modaltt" style="margin-top:40px; margin-left:30px;">Cập nhật thông tin</a>
+													<div class="modal fade" id="modaltt">
+														<div class="modal-dialog">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																	<h4 class="modal-title">Modal title</h4>
+																</div>
+																<div class="modal-body">
+																	<div class="row">
+																		<div class="title" style=" text-align:center; margin-bottom:15px;">
+																			<h2> CẬP NHẬP THÔNG TIN </h2>
+																			<hr>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="padding-right:0px;">
+																			<div class="svAnhDaiDien" >
+																				<img src="images/daidien.jpg" alt="Image" width="90%" height="250px" style="margin-left:10px;">
+																				<form action="">
+																					<input type="file" name="pic" accept="image/*">
+																				</form>
+																			</div>
+																		</div>
+																		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+																			<form action="" onsubmit="" method="POST" class="form-horizontal" role="form">
+																				<div class="form-group" style="margin-left:20px;">
+																					<div class="col-xs-11">
+																						<label for="mail">Mail<span>:</span></label> 
+																						<input class="form-control" id="mail" type="text" required>
+																					</div><br>
+																					<div class="col-xs-11">
+																						<label for="sdt">Số điện thoại<span>:</span></label>
+																						<input class="form-control" id="sdt" type="text" required>
+																					</div><br>
+																					<div class="col-xs-11">
+																						<label for="cnnh">Chi nhánh ngân hàng<span>:</span></label> 
+																						<input class="form-control" id="cnnh" type="text" required>
+																					</div><br>
+																					<div class="col-xs-11">
+																						<label for="dvct">Đơn vị công tác<span>:</span></label> 
+																						<input class="form-control" id="dvct" type="text" required>
+																					</div><br>
+																				</div><br>
+																				<div class="modal-footer">
+																					<button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+																					<button type="submit" class="btn btn-primary">Lưu</button>
+																				</div>
+																			</form>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>

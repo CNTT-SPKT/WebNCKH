@@ -9,21 +9,7 @@ $(window).load(function(){
 		$(this).dropdown();
 	});
 });
-// $function getInfo()
-// {
-// 	var f=document.doipass;
-// 	if(f.pass.value="")
-// 	{
-// 		document.getElementById("pass-error").style.display='block';
-// 		document.getElementById("pass-error").innnerHTML="Nhập lại mật khẩu!";
-// 		f.pass.focus();
-// 		return false;
-// 	}
-// 	else
 
-// 		document.getElementById("pass-error").style.display='none';
-// 	return true;
-// };
 $(document).ready(function(){
 	$("#svPage_GuiDonDK").click(function(){
 		alert('Gửi đơn đăng ký thành công!');
@@ -88,6 +74,19 @@ $(document).ready(function(){
 	})
 
 });
+$(document).ready(function){
+
+	$("#tbUpload").change(function() {
+		$("#btnUpload").trigger('click');
+	});
+});
+// function myFunction() {
+//     var txt = "";
+//     if (document.getElementById("password").validity.rangeUnderflow) {
+//        txt = "Value too small";
+//     }
+//     document.getElementById("demo").innerHTML = txt;
+// }
 
 /* Login Check input*/
 /*End*/

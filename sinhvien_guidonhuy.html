@@ -523,7 +523,61 @@
 															</div>
 														</div>
 													</div>
-													<a class="btn btn-info" href="sinhvien_CapNhatThongTin.html" style="margin-top:40px; margin-left:30px;" role="button">Cập nhật thông tin</a>
+													<a class="btn btn-info" data-toggle="modal" href="#modaltt" style="margin-top:40px; margin-left:30px;">Cập nhật thông tin</a>
+													<div class="modal fade" id="modaltt">
+														<div class="modal-dialog">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+																	<h4 class="modal-title">Modal title</h4>
+																</div>
+																<div class="modal-body">
+																	<div class="row">
+																		<div class="title" style=" text-align:center; margin-bottom:15px;">
+																			<h2> CẬP NHẬP THÔNG TIN </h2>
+																			<hr>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5" style="padding-right:0px;">
+																			<div class="svAnhDaiDien" >
+																				<img src="images/daidien.jpg" alt="Image" width="90%" height="250px" style="margin-left:10px;">
+																				<form action="">
+																					<input type="file" name="pic" accept="image/*">
+																				</form>
+																			</div>
+																		</div>
+																		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+																			<form action="" onsubmit="" method="POST" class="form-horizontal" role="form">
+																				<div class="form-group" style="margin-left:20px;">
+																					<div class="col-xs-11">
+																						<label for="mail">Mail<span>:</span></label> 
+																						<input class="form-control" id="mail" type="text" required>
+																					</div><br>
+																					<div class="col-xs-11">
+																						<label for="sdt">Số điện thoại<span>:</span></label>
+																						<input class="form-control" id="sdt" type="text" required>
+																					</div><br>
+																					<div class="col-xs-11">
+																						<label for="cnnh">Chi nhánh ngân hàng<span>:</span></label> 
+																						<input class="form-control" id="cnnh" type="text" required>
+																					</div><br>
+																					<div class="col-xs-11">
+																						<label for="dvct">Đơn vị công tác<span>:</span></label> 
+																						<input class="form-control" id="dvct" type="text" required>
+																					</div><br>
+																				</div><br>
+																				<div class="modal-footer">
+																					<button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+																					<button type="submit" class="btn btn-primary">Lưu</button>
+																				</div>
+																			</form>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>

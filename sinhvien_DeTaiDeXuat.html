@@ -7,14 +7,8 @@
 <script type="text/javascript" src="1.js"></script>
 <link rel="stylesheet" href="vendor/bootstrap.css">
 <link rel="stylesheet" href="1.css">
+<script type="text/javascript" src="jquery.validate.min.js"></script>
 <link rel="stylesheet" href="vendor/font-awesome.css">
-<script type="text/javascript">
-$(document).ready(function(){
-	$(".dangky").click(function(){
-		$("#dkdtdexuat").load("dangkydt.html")
-	});
-});
-</script>
 </head>
 <body >
 	<div class="page">
@@ -77,7 +71,7 @@ $(document).ready(function(){
 						
 						<div class="tab-pane active" id="dsDeTaiDeXuat"  >
 							<div class="row">
-								<div class="svdsDeTai" id="dkdtdexuat" style="background:white;height:500px;margin-right:15px;border-radius:3px">
+								<div class="svdsDeTai" style="background:white;height:500px;margin-right:15px;border-radius:3px">
 									<h2 class="tieude_theh">DANH SÁCH ĐỀ TÀI ĐƯỢC ĐỀ XUẤT</h2>
 									<hr>
 									<div class="sv_table_dsDeTai" style="Margin-top:20px;">
@@ -98,22 +92,21 @@ $(document).ready(function(){
 													<td>Nghiên cứu hệ thống nhúng</td>
 													<td>12/12/2012</td>
 													<td>Lê Thị B</td>
-													<td><a class="dangky" >Đăng ký</a></td>
+													<td><a href="sinhvien_CTDTDeXuat.html" >Đăng ký</a></td>
 												</tr>
 												<tr>
 													<td>142</td>
 													<td>Xây dựng web bán điện thoại</td>
 													<td>12/12/2012</td>
 													<td>Lê C</td>
-													<td><a class="dangky" >Đăng ký</a></td>
-													
+													<td><a href="sinhvien_CTDTDeXuat.html" >Đăng ký</a></td>
 												</tr>
 												<tr>
 													<td>143</td>
 													<td>Xây dựng web laptop</td>
 													<td>12/12/2012</td>
 													<td>Lê C</td>
-													<td><a class="dangky" >Đăng ký</a></td>
+													<td><a href="sinhvien_CTDTDeXuat.html" >Đăng ký</a></td>
 												</tr>
 											</tbody>
 										</table>
@@ -263,7 +256,7 @@ $(document).ready(function(){
 						</div>
 						<div class="tab-pane" id="dkDeTai">
 							<div class="row" style="margin-right:0px;">
-								<div class="svdkDeTai" style="background:white;border-radius:3px">
+								<div class="svdkDeTai" style="background:white;height:1600px;border-radius:3px">
 									<h2 class="tieude_theh">ĐĂNG KÝ ĐỀ TÀI</h2>
 									<hr>
 									<div class="container" style="width:800px">
@@ -274,7 +267,7 @@ $(document).ready(function(){
 														<div class="form-group">
 															<label class="col-sm-2 control-label" for="tendetai">Tên đề tài:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<input class="form-control" id="tendetai" type="text">
+																<input class="form-control" id="tendetai" type="text" required>
 															</div>
 															<label class="col-sm-2 control-label" for="mota">Mô tả:</label>
 															<div class="col-sm-10">
@@ -331,19 +324,19 @@ $(document).ready(function(){
 																		<div class="row" style="margin-bottom:5px">
 																			<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
 																			<div class="col-sm-8">
-																				<input class="form-control" id="hoten1" type="text">
+																				<input class="form-control" id="hoten1" type="text" required>
 																			</div>
 																		</div>
 																		<div class="row" style="margin-bottom:5px">
 																			<label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
 																			<div class="col-sm-8">
-																				<input class="form-control" id="mss1" type="text">
+																				<input class="form-control" id="mss1" type="text" required>
 																			</div>
 																		</div>
 																		<div class="row" style="margin-bottom:5px">
 																			<label class="col-sm-4 control-label" for="mail1">Email:</label>
 																			<div class="col-sm-8">
-																				<input class="form-control" id="mail1" type="text">
+																				<input class="form-control" id="mail1" type="text" required>
 																			</div>
 																		</div>
 																		<br>
@@ -366,13 +359,13 @@ $(document).ready(function(){
 																		<div class="row" style="margin-bottom:5px">
 																			<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
 																			<div class="col-sm-8">
-																				<input class="form-control" id="hoten1" type="text">
+																				<input class="form-control" id="hoten1" type="text" required>
 																			</div>
 																		</div>
 																		<div class="row" style="margin-bottom:5px">
 																			<label class="col-sm-4 control-label" for="mssv1">Email:</label>
 																			<div class="col-sm-8">
-																				<input class="form-control" id="mss1" type="text">
+																				<input class="form-control" id="mss1" type="text" required>
 																			</div>
 																			<br><br><br><br><br><br>
 																			<label style="margin-left:60px">Sinh viên cùng thực hiện(2):</label><br>
@@ -424,18 +417,18 @@ $(document).ready(function(){
 
 															<label class="col-sm-2 control-label" for="sanphamdukiem">Sản phẩm dự kiến:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<input class="form-control" id="sanphamdukiem" type="text">
+																<input class="form-control" id="sanphamdukiem" type="text" required>
 															</div>
 
 
 															<label class="col-sm-2 control-label" for="diachiungdung">Địa chỉ ứng dụng:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<input class="form-control" id="diachiungdung" type="text">
+																<input class="form-control" id="diachiungdung" type="text" required>
 															</div>
 
 															<label class="col-sm-2 control-label" for="dxuatkinhphi">Đề xuất kinh phí:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<input class="form-control" id="dxuatkinhphi" type="text">
+																<input class="form-control" id="dxuatkinhphi" type="text" required>
 															</div>
 
 															<label class="col-sm-2 control-label" for="tendetai">Tải file chi tiết:</label>
@@ -444,7 +437,7 @@ $(document).ready(function(){
 															</div>
 
 															<div id="guidon" style="">
-																<button type="submit" id="svPage_GuiDonDK" style="color: #fff;background-color: #5bc0de;border-color: #46b8da; height:35px;width:150px;background-image: none;border: 1px solid transparent;border-radius: 4px; margin-right:15px;float:right;">Gửi đơn đăng ký</button>
+																<button type="submit" id="btn_GuiDon" style="color: #fff;background-color: #5bc0de;border-color: #46b8da; height:35px;width:150px;background-image: none;border: 1px solid transparent;border-radius: 4px; margin-right:15px;float:right;">Gửi đơn đăng ký</button>
 																<a class="btn btn-warning" href="sinhvien_DeTaiDeXuat.html" role="button" style="margin-left:10px">Đăng ký đề tài được đề xuất</a>
 
 															</div>
@@ -498,7 +491,6 @@ $(document).ready(function(){
 													<input type="file" name="pic" accept="image/*">
 												</form>
 											</div>
-											
 										</div>
 										<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 											<div class="row">
@@ -537,32 +529,35 @@ $(document).ready(function(){
 																		<hr>
 																	</div>
 																	<div class="doi">
-																		<form action="" onsubmit="return getInfo();" name="doipass" method="POST" class="form-horizontal" role="form">
-																			<div class="form-group">
-																				<label for="input" class="col-sm-5 control-label">Mật khẩu cũ:</label>
-																				<div class="col-sm-7">
-																					<input type="text" name="pass" id="pass" class="form-control" required="required" title="" style="width:200px;margin-bottom:10px">
-																					<span class="error" id="pass-error"></span>
+																		<form action="" id="register-form" name="doipass" method="POST" class="form-horizontal" role="form">
+																			<div class="form-group has-feedback" style="margin-left:65px;">
+																				<div class="col-xs-10">
+																					<label for="pass">Mật khẩu cũ<span>:</span></label> 
+																					<input class="form-control" name="pass" id="pass" type="password"  required />
+																					<span class="glyphicon form-control-feedback" id="pass1"></span>
 																				</div>
-																				<label for="input" class="col-sm-5 control-label">Mật khẩu mới:</label><br>
-																				<div class="col-sm-7">
-																					<input type="text" name="newpass" id="newpass" class="form-control" required="required" title="" style="width:200px;margin-bottom:10px">
-																					<span class="error" id="newpass-error"></span>
+																			</div>
+																			<div class="form-group has-feedback" style="margin-left:65px;">
+																				<div class="col-xs-10">
+																					<label for="npass">Mật khẩu mới<span>:</span></label> 
+																					<input class="form-control " name="npass"  type="password" id="npass" required />
+																					<span class="glyphicon form-control-feedback" id="npass1"></span>
 																				</div>
-																				<label for="input" class="col-sm-5 control-label">Nhập lại mật khẩu mới:</label><br>
-																				<div class="col-sm-7">
-																					<input type="text" name="confew" id="confew" class="form-control" required="required" title="" style="width:200px;margin-bottom:10px">
-																					<span class="error" id="confew-error"></span>
+																			</div>
+																			<div class="form-group has-feedback" style="margin-left:65px;">
+																				<div class="col-xs-10">
+																					<label for="cfpass">Mật khẩu mới<span>:</span></label> 
+																					<input class="form-control" name="cfpass" id="cfpass"  type="password" required />
+																					<span class="glyphicon form-control-feedback" id="cfpass1"></span>
 																				</div>
 																			</div>
 																			<div class="modal-footer">
-																				<button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
-																				<button type="submit" class="btn btn-primary">Lưu</button>
+																				<button type="button" class="btn btn-danger"  data-dismiss="modal">Hủy</button>
+																				<button type="submit" id="btnsm" class="btn btn-primary">Lưu</button>
 																			</div>
 																		</form>
 																	</div>
 																</div>
-
 															</div>
 														</div>
 													</div>
@@ -591,31 +586,41 @@ $(document).ready(function(){
 																			</div>
 																		</div>
 																		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-																			<form action="" onsubmit="" method="POST" class="form-horizontal" role="form">
-																				<div class="form-group" style="margin-left:20px;">
+																			<form action="" id="formcntt" method="POST" class="form-horizontal" role="form">
+																				<div class="form-group has-feedback" style="margin-left:20px;">
 																					<div class="col-xs-11">
-																						<label for="mail">Mail<span>:</span></label> 
-																						<input class="form-control" id="mail" type="text" required>
-																					</div><br>
-																					<div class="col-xs-11">
-																						<label for="sdt">Số điện thoại<span>:</span></label>
-																						<input class="form-control" id="sdt" type="text" required>
-																					</div><br>
-																					<div class="col-xs-11">
-																						<label for="cnnh">Chi nhánh ngân hàng<span>:</span></label> 
-																						<input class="form-control" id="cnnh" type="text" required>
-																					</div><br>
-																					<div class="col-xs-11">
-																						<label for="dvct">Đơn vị công tác<span>:</span></label> 
-																						<input class="form-control" id="dvct" type="text" required>
-																					</div><br>
-																				</div><br>
-																				<div class="modal-footer">
-																					<button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
-																					<button type="submit" class="btn btn-primary">Lưu</button>
+																						<label for="email">Mail<span>:</span></label> 
+																						<input class="form-control" name="email" id="email" type="text" required/>
+																						<span class="glyphicon form-control-feedback" id="email1"></span>
+																					</div>
 																				</div>
-																			</form>
-																		</div>
+																				<div class="form-group has-feedback" style="margin-left:20px;">
+																					<div class="col-xs-11">
+																						<label for="sodt">Số điện thoại<span>:</span></label>
+																						<input class="form-control" name="sodt" id="sodt" type="number" number required/>
+																						<span class="glyphicon form-control-feedback" id="sodt1"></span>
+																					</div>
+																				</div>
+																				<div class="form-group has-feedback" style="margin-left:20px;">
+																					<div class="col-xs-11">
+																						<label for="cnnganhang">Chi nhánh ngân hàng<span>:</span></label> 
+																						<input class="form-control" name="cnnganhang" id="cnnganhang" type="text" required/>
+																						<span class="glyphicon form-control-feedback" id="cnnganhang1"></span>
+																					</div>
+																				</div>
+																				<div class="form-group has-feedback" style="margin-left:20px;">
+																					<div class="col-xs-11">
+																						<label for="donvi">Đơn vị công tác<span>:</span></label> 
+																						<input class="form-control" name="donvi" id="donvi" type="text" required/>
+																						<span class="glyphicon form-control-feedback" id="donvi1"></span>
+																					</div>
+																				</div>
+																			</div><br>
+																			<div class="modal-footer">
+																				<button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+																				<button type="submit" class="btn btn-primary">Lưu</button>
+																			</div>
+																		</form>
 																	</div>
 																</div>
 															</div>
@@ -624,10 +629,11 @@ $(document).ready(function(){
 												</div>
 											</div>
 										</div>
-									</div><hr>
-								</div>
+									</div>
+								</div><hr>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>

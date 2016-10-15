@@ -9,16 +9,13 @@
 	<script type="text/javascript" src="1.js"></script>
 	<link rel="stylesheet" href="vendor/bootstrap.css">
 	<link rel="stylesheet" href="1.css">
-	<script type="text/javascript">
-	$(document).ready(function(){
-	$("#bieumau").click(function(){
-		$("#mainP").load("BieuMau.html")
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script>
+	$(function() {
+		$('#ajax_content').load("mainPage_TrangChu.html");
 	});
-
-});
-</script>
+	</script>
 </head>
-
 <body>
 	<div class="page">
 		<div class="menu">
@@ -37,27 +34,27 @@
 									<span class="icon-bar"></span>
 								</button>
 							</div>
-
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse navbar-ex1-collapse" id="menuMain">
-								<ul class="nav navbar-nav">
-									<li><a href="#">Trang chủ</a></li>
-									<li><a id="bieumau" href="#">Biểu Mẫu</a></li>
-									<li><a href="#">Liên Hệ</a></li>
-									<li><a href="#">Hướng dẫn</a></li>
+								<ul class="nav navbar-nav" >
+									<li ajaxid="mainPage_TrangChu.html"><a href="">Trang chủ</a></li>
+									<li ajaxid="mainPage_BieuMau.html"><a href="">Biểu Mẫu</a></li>
+									<li ajaxid="mainPage_LienHe.html"><a href="">Liên Hệ</a></li>
+									<li ajaxid="mainPage_HuongDan.html"><a href="">Hướng dẫn</a></li>
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="loginPage.html">Đăng nhập</a></li>
+									<li ajaxid="mainPage_Login.html"><a href>Đăng nhập</a></li>
 								</ul>
 							</div>
+							
 							<!-- /.navbar-collapse -->
 						</div>
 					</nav>
 				</div>
 			</div>
 		</div>
-		<div class="content">
-			<div class="row" id="mainP">
+		<div class="content" style="overflow:hidden">
+			<div class="row" id="ajax_content">
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 					<div class="row">
 						<div class="slide">
@@ -274,7 +271,7 @@
 			</pre>
 		</footer>
 	</div>
-	</div>
+</div>
 </body>
 
 </html>

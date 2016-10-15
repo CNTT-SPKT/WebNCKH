@@ -15,6 +15,7 @@
 		$('#ajax_content').load("mainPage_TrangChu.html");
 	});
 	</script>
+	
 </head>
 <body>
 	<div class="page">
@@ -46,14 +47,22 @@
 									<li ajaxid="mainPage_Login.html"><a href>Đăng nhập</a></li>
 								</ul>
 							</div>
-							
+							<script>
+							$(function() {
+								$("#menuMain li").on("click", function(e) {
+									e.preventDefault(); 
+									var x = $(this).attr("ajaxid");
+									$('#ajax_content').load(x);
+								});
+							});
+							</script>
 							<!-- /.navbar-collapse -->
 						</div>
 					</nav>
 				</div>
 			</div>
 		</div>
-		<div class="content" style="overflow:hidden">
+		<div class="content">
 			<div class="row" id="ajax_content">
 				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 					<div class="row">

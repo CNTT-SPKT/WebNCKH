@@ -396,11 +396,5 @@ $(document).ready(function() {
 //     $('form').goValidate();
 
 // });
-$(function() {
-	$("#menuMain li").on("click", function(e) {
-		e.preventDefault(); 
-		var x = $(this).attr("ajaxid");
-		$('#ajax_content').load(x);
-    });
-});
+
 

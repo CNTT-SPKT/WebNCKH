@@ -278,22 +278,22 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr id="tr1">
-													<td><input type="checkbox" name="" id="select1" checkboxid="tr1" value=""></td>
+												<tr >
+													<td><input type="checkbox" name="" value=""></td>
 													<td>Thông báo đề tài gần hết hạn</td>
 													<td>Phòng NCKH</td>
 													<td>12/12/2012</td>
 													<td><a href="sinvien_XemThongBao.html">Xem</a></td>
 												</tr>
-												<tr id="tr2">
-													<td><input type="checkbox" name="" id="select2" checkboxid="tr2" value=""></td>
+												<tr >
+													<td><input type="checkbox" name="" value=""></td>
 													<td>Thông báo đề tài được duyệt</td>
 													<td>Phòng NCKH</td>
 													<td>12/12/2012</td>
 													<td><a href="sinvien_XemThongBao.html">Xem</a></td>
 												</tr>
-												<tr id="tr3">
-													<td><input type="checkbox" name="" id="select3" checkboxid="tr3" value=""></td>
+												<tr >
+													<td><input type="checkbox" name=""value=""></td>
 													<td>Thông báo đề tài được duyệt</td>
 													<td>Phòng NCKH</td>
 													<td>12/12/2012</td>
@@ -313,27 +313,7 @@
 												});
 											}
 										});
-										$(function() {
-											$("#btn_Xoa").on("click", function() {
-												var rowCount = $('tbody input').length;
-												var i=0;
-												var temp=0;
-												for(i;i<rowCount;i++)
-												{
-													if($('tbody input').eq(i).is(":checked"))
-													{
-														var x=$('tbody input').eq(i).attr("checkboxid");
-														$("#"+x).hide(2000);              
-														temp++;
-													}
-												}
-												if(temp!=0)
-												{
-													setTimeout(function () {
-														alert('Xóa thành công')}, 2000);
-												}
-											});
-										});
+										
 										</script>
 									</div>
 									<button type="button" class="btn btn-danger" id="btn_Xoa" style="float:right; margin-right:10px">

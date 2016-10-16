@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="vendor/bootstrap.js"></script>
     <script type="text/javascript" src="1.js"></script>
+    <script type="text/javascript" src="jquery.validate.min.js"></script>
     <link rel="stylesheet" href="vendor/bootstrap.css">
     <link rel="stylesheet" href="1.css">
     <link rel="stylesheet" href="vendor/font-awesome.css">
@@ -98,7 +99,7 @@
                 </div>
                 <div class="col-md-10">
                     <div class="tab-content">
-                        		<div class="tab-pane active" id="dkdetaidexuat">
+                        <div class="tab-pane active" id="dkdetaidexuat">
 							<div class="row">
 								<div class="qldkDeTai" style="background:white;border-radius:3px">
 									<h2 class="tieude_theh">ĐĂNG KÝ ĐỀ TÀI ĐỀ XUẤT</h2>
@@ -294,9 +295,8 @@
                         <div class="tab-pane" id="postThongBao">
                             <div class="row">
                                 <div class="clposthongbao" style="overflow:auto; background:white;height:600px;margin-right:15px;border-radius:3px">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">THÔNG BÁO</h2>
+                                    <h2 class="tieude_theh">THÔNG BÁO</h2><hr>
                                     <div class="ql_table_thongbao">
-                                        <a class="btn btn-danger" href="#" role="button">Xóa thông báo</a>
                                         <table class="table table-striped table-hover">
                                             <thead class="thead-default">
                                                 <tr class="success">
@@ -309,106 +309,92 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name="" value=""></td>
+                                                    <td>Đăng ký đề tài mới...</td>
+                                                    <td>Giảng viên 1</td>
+                                                    <td>12/12/2014</td>
+                                                    <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đăng ký đề tài mới...</td>
                                                     <td>Giảng viên 1</td>
                                                     <td>12/12/2013</td>
                                                     <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đăng ký đề tài mới...</td>
                                                     <td>Giảng viên 1</td>
                                                     <td>12/12/2013</td>
                                                     <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đăng ký đề tài mới...</td>
                                                     <td>Giảng viên 1</td>
                                                     <td>12/12/2013</td>
                                                     <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name="" value=""></td>
+                                                    <td>Đăng ký đề tài mới...</td>
+                                                    <td>Giảng viên 1</td>
+                                                    <td>12/12/2013</td>
+                                                    <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
+                                                </tr>
+                                                <tr id="select6">
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đăng ký đề tài mới...</td>
                                                     <td>Giảng viên 1</td>
                                                     <td>12/12/2013</td>
                                                     <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đăng ký đề tài mới...</td>
-                                                    <td>Giảng viên 1</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đăng ký đề tài mới...</td>
-                                                    <td>Giảng viên 1</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đăng ký đề tài mới...</td>
-                                                    <td>Giảng viên 1</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đăng ký đề tài mới...</td>
                                                     <td>Giảng viên 1</td>
                                                     <td>12/12/2013</td>
                                                     <td><a href="quanly_PheDuyetDT.html">Xem</a></td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                <tr >
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đơn xin hủy đề tài</td>
                                                     <td>Sinh viên 1</td>
                                                     <td>12/12/2012</td>
                                                     <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name="" value=""></td>
+                                                    <td>Đơn xin gia hạn đề tài</td>
+                                                    <td>Sinh viên 2</td>
+                                                    <td>12/12/2013</td>
+                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
+                                                </tr>
+                                                <tr >
+                                                    <td><input type="checkbox" name=""  value=""></td>
+                                                    <td>Đơn xin gia hạn đề tài</td>
+                                                    <td>Sinh viên 2</td>
+                                                    <td>12/12/2013</td>
+                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
+                                                </tr>
+                                                <tr > 
+                                                    <td><input type="checkbox" name=""  value=""></td>
+                                                    <td>Đơn xin gia hạn đề tài</td>
+                                                    <td>Sinh viên 2</td>
+                                                    <td>12/12/2013</td>
+                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
+                                                </tr>
+                                                <tr >
+                                                    <td><input type="checkbox" name="" value=""></td>
                                                     <td>Đơn xin gia hạn đề tài</td>
                                                     <td>Sinh viên 2</td>
                                                     <td>12/12/2013</td>
                                                     <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đơn xin gia hạn đề tài</td>
-                                                    <td>Sinh viên 2</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đơn xin gia hạn đề tài</td>
-                                                    <td>Sinh viên 2</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đơn xin gia hạn đề tài</td>
-                                                    <td>Sinh viên 2</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
-                                                    <td>Đơn xin gia hạn đề tài</td>
-                                                    <td>Sinh viên 2</td>
-                                                    <td>12/12/2013</td>
-                                                    <td><a href="quanly_DuyetDonHuy.html">Xem</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" name="" id="input" value=""></td>
+                                                    <td><input type="checkbox" name=""  value=""></td>
                                                     <td>Đơn xin gia hạn đề tài</td>
                                                     <td>Sinh viên 2</td>
                                                     <td>12/12/2013</td>
@@ -418,20 +404,22 @@
                                             </tbody>
                                         </table>
                                         <script>
-                                        $('#selectAll_ThongBao').change(function(){
-                                            if($(this).prop('checked')){
-                                                $('tbody tr td input[type="checkbox"]').each(function(){
-                                                    $(this).prop('checked', true);
+                                                $('#selectAll_ThongBao').change(function(){
+                                                    if($(this).prop('checked')){
+                                                        $('tbody tr td input[type="checkbox"]').each(function(){
+                                                            $(this).prop('checked', true);
+                                                        });
+                                                    }else{
+                                                        $('tbody tr td input[type="checkbox"]').each(function(){
+                                                            $(this).prop('checked', false);
+                                                        });
+                                                    }
                                                 });
-                                            }else{
-                                                $('tbody tr td input[type="checkbox"]').each(function(){
-                                                    $(this).prop('checked', false);
-                                                });
-                                            }
-                                        });
+                                               
                                         </script>
-                                    </div>
-
+                                        </div>
+                                        <button type="button" class="btn btn-danger" id="btn_Xoa" style="float:right; margin-right:10px; margin-bottom:10px;">
+                                            <span class="glyphicon glyphicon-trash"></span> Xóa thông báo</button>
                                 </div>
                             </div>
                         </div>
@@ -439,8 +427,8 @@
                         <div class="tab-pane" id="dsHDNT">
                             <div class="row">
                                 <div class="cldsHDNT" style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">DANH SÁCH HỘI ĐỒNG NGHIỆM THU</h2>
-                                    <a style="float:right; margin-right: 10px;" class="btn btn-danger" href="quanlyPage_LTHDNT.html" role="button">Thành lập hội đồng nghiệm thu</a>
+                                    <h2 class="tieude_theh">DANH SÁCH HỘI ĐỒNG NGHIỆM THU</h2><hr>
+                                    
                                     <div class="quanly_dsHDNT">
                                         <div class="ql_table_dsHDNT"></div>
 
@@ -465,9 +453,9 @@
                                                       <td>Trương Văn A</td>
                                                     <td>12/12/2016</td>
                                                     <td>456</td>
-                                                    <td><a href="quanly_XemDSHDNT.html">Xem</a></td>
+                                                    <td><a href="quanly_ChiTiet.html">Xem</a></td>
                                                     <td class="dropdown">
-                                                        <a style="margin-top: -5px;" class="btn btn-warning dsDeTai_actionButton" data-toggle="dropdown" href="#"> Xóa hội đồng </a></td>
+                                                        <a style="margin-top: -5px;" class="btn btn-danger dsDeTai_actionButton" data-toggle="dropdown" href="#"> Xóa hội đồng </a></td>
                                                 </tr>
                                                 <tr>
                                                     <td>HD3</td>
@@ -476,12 +464,13 @@
                                                     <td>Trương Văn A</td>
                                                     <td>12/11/2016</td>
                                                     <td>123</td>
-                                                    <td><a href="quanly_XemDSHDNT.html">Xem</a></td>
+                                                    <td><a href="quanly_ChiTiet.html">Xem</a></td>
                                                     <td class="dropdown">
-                                                        <a style="margin-top: -5px;" class="btn btn-warning dsDeTai_actionButton" data-toggle="dropdown" href="#"> Xóa hội đồng </a></td>
+                                                        <a style="margin-top: -5px;" class="btn btn-danger dsDeTai_actionButton" data-toggle="dropdown" href="#"> Xóa hội đồng </a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                         <a class="btn btn-info" style="float:right; margin-right: 10px;" href="quanlyPage_LTHDNT.html" role="button">Thành lập hội đồng nghiệm thu</a>
                                     </div>
                                 </div>
 
@@ -491,8 +480,7 @@
                             <!--danh sách đề tài phản biện-->
                             <div class="row">
                                 <div class="cldsDTPB" style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">PHÂN CÔNG PHẢN BIỆN</h2>
-                                    <a style="float:right; margin-right: 10px;" class="btn btn-danger" href="quanlyPage_PCPB.html" role="button">Phân công phản biện</a>
+                                    <h2 class="tieude_theh">PHÂN CÔNG PHẢN BIỆN</h2><hr>
                                     <div class="quanly_dsHDPB">
 
                                         <div class="ql_table_dsDTPB">
@@ -520,6 +508,7 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                             <a class="btn btn-info" style="float:right; margin-right: 10px;" href="quanlyPage_LTHDNT.html" role="button">Phân công phản biện</a>
                                         </div>
                                     </div>
                                 </div>
@@ -528,7 +517,7 @@
                         <div class="tab-pane" id="dsDeTaiPhanBien">
                             <div class="row">
                                 <div class="ql_dsDeTaiPhanBien" style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">DANH SÁCH ĐỀ TÀI ĐƯỢC PHÂN CÔNG PHẢN BIỆN</h2>
+                                    <h2 class="teude_theh">DANH SÁCH ĐỀ TÀI ĐƯỢC PHÂN CÔNG PHẢN BIỆN</h2><hr>
                                     <div class="ql_tb_dsDeTaiPhanBien">
                                         <table class="table table-striped table-hover">
                                             <thead class="thead-default">
@@ -571,12 +560,12 @@
                             <div class="row">
                                 <div class="form-group" style="margin-bottom:0px;">
                                     <div class="ql_quanLyDeTai" style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px;">
-                                        <h2 style="margin-bottom:0px;margin-top:0px;padding:5px;text-align:center;font-family:sans-serif">QUẢN LÝ ĐỀ TÀI</h2>
+                                        <h2 class="teude_theh">QUẢN LÝ ĐỀ TÀI</h2><hr>
                                         <div class="ql_tb_quanLyDeTai" style="font-size:13px">
                                             <div class="timQLDT" style="float:right;margin-bottom:10px;padding-top:-5;">
-                                                <div style="margin-left:0px;"  class=" col-sm-6 col-sm-offset-3 ">
+                                                <div style="margin-left:0px;" class=" col-sm-6 col-sm-offset-3 ">
 
-                                                            <select style="float:left;width:150px " class="form-control">
+                                                            <select style="float:left;width:150px;; " class="form-control">
                                                     <option value="" selected>Tìm theo...</option>
                                                     <option value="">Tất cả</option>
                                                     <option value="">Mã đề tài</option>
@@ -584,7 +573,7 @@
                                                     </select>
 
 
-                                                     <div style=";width:400px; " id="imaginary_container ">
+                                                    <div style=";width:400px; " id="imaginary_container ">
                                                         <div class="input-group stylish-input-group ">
                                                             <input type="text " class="form-control " placeholder="Search ">
                                                             <span class="input-group-addon ">
@@ -697,7 +686,7 @@
                         <div class="tab-pane " id="dsDeTaiPheDuyet">
                             <div class="row ">
                                 <div class="ql_dsDeTaiPheDuyet " style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px ">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif ">DANH SÁCH ĐỀ TÀI ĐƯỢC PHÂN CÔNG PHÊ DUYỆT</h2>
+                                    <h2 class="teude_theh">DANH SÁCH ĐỀ TÀI ĐƯỢC PHÂN CÔNG PHÊ DUYỆT</h2><hr>
                                     <div class="ql_tb_dsDeTaiPheDuyet ">
                                         <table class="table table-striped table-hover ">
                                             <thead class="thead-default ">
@@ -737,7 +726,7 @@
                         <div class="tab-pane " id="dsDeTaiHuongDan">
                             <div class="row ">
                                 <div class="ql_dsDeTaiHuongDan " style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px ">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif ">DANH SÁCH ĐỀ TÀI HƯỚNG DẪN</h2>
+                                    <h2 class="teude_theh">DANH SÁCH ĐỀ TÀI HƯỚNG DẪN</h2><hr>
                                     <div class="ql_tb_dsDeTaiHuongDan ">
                                         <table class="table table-striped table-hover ">
                                             <thead class="thead-default ">
@@ -770,207 +759,207 @@
                                 </div>
                             </div>
                         </div>
-                     	<div class="tab-pane" id="dkDeTai">
+                        <div class="tab-pane" id="dkDeTai">
                              
-										<div class="row" style="margin-right:0px;">
-											<div class="qldkDeTai" style="background:white;height:1600px;border-radius:3px">
-												<h2 class="tieude_theh">ĐĂNG KÝ ĐỀ TÀI</h2>
-												<hr>
-												<div class="container" style="width:800px">
-													<div class="row">
-														<div class="mota">
-															<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-																<form action=" " onsubmit="" method="POST" role="form" class="form-horizontal">
-																	<div class="form-group">
-																		<label class="col-sm-2 control-label" for="tendetai">Tên đề tài:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<input class="form-control" id="tendetai" type="text" required>
-																		</div>
-																		<label class="col-sm-2 control-label" for="mota">Mô tả:</label>
-																		<div class="col-sm-10">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
-																		<br>
-																		<br>
-																		<label class="col-sm-2 control-label" for="linhvucnghiencuu">Lĩnh vực nghiên cứu:</label>
-																		<div class="col-sm-10" id="linhvucnghiencuu">
-																			<label class="radio-inline"><input type="radio" value="tunhien" name="linhvucnghiencuu" checked="checked"> Tự nhiên</label>
-																			<label class="radio-inline"><input type="radio" value="xhnv" name="linhvucnghiencuu">Xã hội nhân văn</label>
-																			<label class="radio-inline"><input type="radio" value="giaoduc" name="linhvucnghiencuu">Giáo dục</label>
-																			<label class="radio-inline"><input type="radio" value="kythuat" name="linhvucnghiencuu">Kỹ thuật</label>
-																			<label class="radio-inline"><input type="radio" value="nong_ngulam" name="linhvucnghiencuu">Nông-ngư lâm</label>
-																			<label class="radio-inline"><input type="radio" value="yduoc" name="linhvucnghiencuu">Y dược</label>
-																			<label class="radio-inline"><input type="radio" value="moitruong" name="linhvucnghiencuu">Môi trường</label>
-																		</div>
-																		<br>
-																		<br>
-																		<label class="col-sm-2 control-label" for="loaihinhnghiencuu">Loại hình nghiên cứu:</label>
-																		<div class="col-sm-10" id="loaihinhnghiencuu">
-																			<label class="radio-inline"><input type="radio" value="coban" name="loaihinhnghiencuu" checked="checked"> Cơ bản:</label>
-																			<label class="radio-inline"><input type="radio" value="ungdung" name="loaihinhnghiencuu">Ứng dụng:</label>
-																			<label class="radio-inline"><input type="radio" value="trienkhai" name="loaihinhnghiencuu">Triển khai:</label>
-																		</div>
-																		<br>
-																		<br><br>
-																		<div class="container" style="margin-top:35px; margin-left:20px;width:800px">
-																			<div class="row">
-																				<label class="col-sm-2 control-label" for="thoigianthuchien">Thời gian thực hiện:</label>
-																				<div class="col-sm-10" id="thoigianthuchien">
-																					<div class="row">
-																						<label class="col-sm-2 control-label" for="thoigianbatdau">Từ:</label>
-																						<div class="col-sm-4" style="margin-bottom:5px;">
-																							<input type="date" name="" id="thoigianbatdau" class="form-control" value="" required="required" title="" style="padding:0px;">
-																						</div>
-																						<label class="col-sm-2 control-label" for="thoigianketthuc">Đến:</label>
-																						<div class="col-sm-4" style="margin-bottom:5px;">
-																							<input type="date" name="" id="thoigianketthuc" class="form-control" value="" required="required" title="" style="padding:0px;">
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<label class="col-sm-2 control-label" for="coquanchutri">Cơ quan chủ trì:</label>
-																		<div class="col-sm-10">
-																			<input class="form-control" id="tendetai" type="text" placeholder="Khoa/Bộ môn trực thuộc">
-																		</div>
-																		<br>
-																		<div class="container" style="margin-top:35px;width:800px">
-																			<div class="row">
-																				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-																					<label style="margin-left:60px">Chủ nhiệm đề tài:</label><br>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="hoten1" type="text" required>
-																						</div>
-																					</div>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="mss1" type="text" required>
-																						</div>
-																					</div>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="mail1">Email:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="mail1" type="text" required>
-																						</div>
-																					</div>
-																					<br>
-																					<label style="margin-left:60px">Sinh viên cùng thực hiện:</label><br>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="hoten1" type="text">
-																						</div>
-																					</div>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="mss1" type="text">
-																						</div>
-																					</div>
-																				</div>
-																				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-																					<label style="margin-left:60px">Giảng viên hướng dẫn:</label><br>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="hoten1" type="text" required>
-																						</div>
-																					</div>
-																					<div class="row" style="margin-bottom:5px">
-																						<label class="col-sm-4 control-label" for="mssv1">Email:</label>
-																						<div class="col-sm-8">
-																							<input class="form-control" id="mss1" type="text" required>
-																						</div>
-																						<br><br><br><br><br><br>
-																						<label style="margin-left:60px">Sinh viên cùng thực hiện(2):</label><br>
-																						<div class="row" style="margin-bottom:5px">
-																							<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
-																							<div class="col-sm-8">
-																								<input class="form-control" id="hoten1" type="text">
-																							</div>
-																						</div>
-																						<div class="row" style="margin-bottom:5px">
-																							<label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
-																							<div class="col-sm-8">
-																								<input class="form-control" id="mss1" type="text">
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		<label class="control-label" for="">Tình hình nghiên cứu trong và ngoài nước:</label><br>
-																		<label class="col-sm-2 control-label" for="mota">Trong nước:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
-																		<label class="col-sm-2 control-label" for="mota">Ngoài nước:</label><br><br>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
+                                        <div class="row" style="margin-right:0px;">
+                                            <div class="qldkDeTai" style="background:white;height:1600px;border-radius:3px">
+                                                <h2 class="tieude_theh">ĐĂNG KÝ ĐỀ TÀI</h2>
+                                                <hr>
+                                                <div class="container" style="width:800px">
+                                                    <div class="row">
+                                                        <div class="mota">
+                                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                <form action=" " onsubmit="" method="POST" role="form" class="form-horizontal">
+                                                                    <div class="form-group">
+                                                                        <label class="col-sm-2 control-label" for="tendetai">Tên đề tài:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <input class="form-control" id="tendetai" type="text" required>
+                                                                        </div>
+                                                                        <label class="col-sm-2 control-label" for="mota">Mô tả:</label>
+                                                                        <div class="col-sm-10">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
+                                                                        <br>
+                                                                        <br>
+                                                                        <label class="col-sm-2 control-label" for="linhvucnghiencuu">Lĩnh vực nghiên cứu:</label>
+                                                                        <div class="col-sm-10" id="linhvucnghiencuu">
+                                                                            <label class="radio-inline"><input type="radio" value="tunhien" name="linhvucnghiencuu" checked="checked"> Tự nhiên</label>
+                                                                            <label class="radio-inline"><input type="radio" value="xhnv" name="linhvucnghiencuu">Xã hội nhân văn</label>
+                                                                            <label class="radio-inline"><input type="radio" value="giaoduc" name="linhvucnghiencuu">Giáo dục</label>
+                                                                            <label class="radio-inline"><input type="radio" value="kythuat" name="linhvucnghiencuu">Kỹ thuật</label>
+                                                                            <label class="radio-inline"><input type="radio" value="nong_ngulam" name="linhvucnghiencuu">Nông-ngư lâm</label>
+                                                                            <label class="radio-inline"><input type="radio" value="yduoc" name="linhvucnghiencuu">Y dược</label>
+                                                                            <label class="radio-inline"><input type="radio" value="moitruong" name="linhvucnghiencuu">Môi trường</label>
+                                                                        </div>
+                                                                        <br>
+                                                                        <br>
+                                                                        <label class="col-sm-2 control-label" for="loaihinhnghiencuu">Loại hình nghiên cứu:</label>
+                                                                        <div class="col-sm-10" id="loaihinhnghiencuu">
+                                                                            <label class="radio-inline"><input type="radio" value="coban" name="loaihinhnghiencuu" checked="checked"> Cơ bản:</label>
+                                                                            <label class="radio-inline"><input type="radio" value="ungdung" name="loaihinhnghiencuu">Ứng dụng:</label>
+                                                                            <label class="radio-inline"><input type="radio" value="trienkhai" name="loaihinhnghiencuu">Triển khai:</label>
+                                                                        </div>
+                                                                        <br>
+                                                                        <br><br>
+                                                                        <div class="container" style="margin-top:35px; margin-left:20px;width:800px">
+                                                                            <div class="row">
+                                                                                <label class="col-sm-2 control-label" for="thoigianthuchien">Thời gian thực hiện:</label>
+                                                                                <div class="col-sm-10" id="thoigianthuchien">
+                                                                                    <div class="row">
+                                                                                        <label class="col-sm-2 control-label" for="thoigianbatdau">Từ:</label>
+                                                                                        <div class="col-sm-4" style="margin-bottom:5px;">
+                                                                                            <input type="date" name="" id="thoigianbatdau" class="form-control" value="" required="required" title="" style="padding:0px;">
+                                                                                        </div>
+                                                                                        <label class="col-sm-2 control-label" for="thoigianketthuc">Đến:</label>
+                                                                                        <div class="col-sm-4" style="margin-bottom:5px;">
+                                                                                            <input type="date" name="" id="thoigianketthuc" class="form-control" value="" required="required" title="" style="padding:0px;">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <label class="col-sm-2 control-label" for="coquanchutri">Cơ quan chủ trì:</label>
+                                                                        <div class="col-sm-10">
+                                                                            <input class="form-control" id="tendetai" type="text" placeholder="Khoa/Bộ môn trực thuộc">
+                                                                        </div>
+                                                                        <br>
+                                                                        <div class="container" style="margin-top:35px;width:800px">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                                    <label style="margin-left:60px">Chủ nhiệm đề tài:</label><br>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="hoten1" type="text" required>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="mss1" type="text" required>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="mail1">Email:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="mail1" type="text" required>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <br>
+                                                                                    <label style="margin-left:60px">Sinh viên cùng thực hiện:</label><br>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="hoten1" type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="mss1" type="text">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                                                    <label style="margin-left:60px">Giảng viên hướng dẫn:</label><br>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="hoten1" type="text" required>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="row" style="margin-bottom:5px">
+                                                                                        <label class="col-sm-4 control-label" for="mssv1">Email:</label>
+                                                                                        <div class="col-sm-8">
+                                                                                            <input class="form-control" id="mss1" type="text" required>
+                                                                                        </div>
+                                                                                        <br><br><br><br><br><br>
+                                                                                        <label style="margin-left:60px">Sinh viên cùng thực hiện(2):</label><br>
+                                                                                        <div class="row" style="margin-bottom:5px">
+                                                                                            <label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
+                                                                                            <div class="col-sm-8">
+                                                                                                <input class="form-control" id="hoten1" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row" style="margin-bottom:5px">
+                                                                                            <label class="col-sm-4 control-label" for="mssv1">MSSV:</label>
+                                                                                            <div class="col-sm-8">
+                                                                                                <input class="form-control" id="mss1" type="text">
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <label class="control-label" for="">Tình hình nghiên cứu trong và ngoài nước:</label><br>
+                                                                        <label class="col-sm-2 control-label" for="mota">Trong nước:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
+                                                                        <label class="col-sm-2 control-label" for="mota">Ngoài nước:</label><br><br>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="mota">Tính cấp thiết của đề tài:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="mota">Tính cấp thiết của đề tài:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="mota">Mục tiêu của đề tài:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="mota">Mục tiêu của đề tài:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="mota">Phương pháp và phạm vi nghiên cứu:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="mota">Phương pháp và phạm vi nghiên cứu:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="mota">Nội dung nghiên cứu và tiến độ thực hiện:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="mota">Nội dung nghiên cứu và tiến độ thực hiện:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <textarea name="" id="mota" class="form-control" rows="2" required="required"></textarea>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="sanphamdukiem">Sản phẩm dự kiến:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<input class="form-control" id="sanphamdukiem" type="text" required>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="sanphamdukiem">Sản phẩm dự kiến:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <input class="form-control" id="sanphamdukiem" type="text" required>
+                                                                        </div>
 
 
-																		<label class="col-sm-2 control-label" for="diachiungdung">Địa chỉ ứng dụng:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<input class="form-control" id="diachiungdung" type="text" required>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="diachiungdung">Địa chỉ ứng dụng:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <input class="form-control" id="diachiungdung" type="text" required>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="dxuatkinhphi">Đề xuất kinh phí:</label>
-																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<input class="form-control" id="dxuatkinhphi" type="text" required>
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="dxuatkinhphi">Đề xuất kinh phí:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:5px">
+                                                                            <input class="form-control" id="dxuatkinhphi" type="text" required>
+                                                                        </div>
 
-																		<label class="col-sm-2 control-label" for="tendetai">Tải file chi tiết:</label>
-																		<div class="col-sm-10" style="margin-bottom:10px">
-																			<input class="form-control" id="tendetai" type="file">
-																		</div>
+                                                                        <label class="col-sm-2 control-label" for="tendetai">Tải file chi tiết:</label>
+                                                                        <div class="col-sm-10" style="margin-bottom:10px">
+                                                                            <input class="form-control" id="tendetai" type="file">
+                                                                        </div>
 
-																		<div id="guidon" style="">
-																			<button type="submit" id="btn_GuiDon" style="color: #fff;background-color: #5bc0de;border-color: #46b8da; height:35px;width:150px;background-image: none;border: 1px solid transparent;border-radius: 4px; margin-right:15px;float:right;">Gửi đơn đăng ký</button>
-																			<a class="btn btn-warning" href="quanly_DeTaiDeXuat.html" role="button" style="margin-left:10px">Đăng ký đề tài được đề xuất</a>
-																		</div>
-																	</div>
-																</div>
-															</form>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-		            
+                                                                        <div id="guidon" style="">
+                                                                            <button type="submit" id="btn_GuiDon" style="color: #fff;background-color: #5bc0de;border-color: #46b8da; height:35px;width:150px;background-image: none;border: 1px solid transparent;border-radius: 4px; margin-right:15px;float:right;">Gửi đơn đăng ký</button>
+                                                                            <a class="btn btn-warning" href="quanly_DeTaiDeXuat.html" role="button" style="margin-left:10px">Đăng ký đề tài được đề xuất</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
                         <div class="tab-pane " id="dsDeTaiDK">
                             <div class="row ">
                                 <div class="ql_dsDeTaiDK " style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px ">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif ">DANH SÁCH ĐỀ TÀI ĐÃ ĐĂNG KÝ</h2>
+                                    <h2 class="teude_theh">DANH SÁCH ĐỀ TÀI ĐÃ ĐĂNG KÝ</h2><hr>
                                     <div class="ql_tb_dsDeTaiDK ">
                                         <table class="table table-striped table-hover ">
                                             <thead class="thead-default ">
@@ -1006,7 +995,7 @@
                         <div class="tab-pane " id="duyetHuy_GianHan">
                             <div class="row ">
                                 <div class="ql_duyetHuy_GianHan " style="background:white;height:600px; overflow: auto;margin-right:15px;border-radius:3px ">
-                                    <h2 style="margin-top:0px;padding:5px;text-align:center;font-family:sans-serif ">DUYỆT HỦY/GIA HẠN ĐỀ TÀI</h2>
+                                    <h2 class="teude_theh">DUYỆT HỦY/GIA HẠN ĐỀ TÀI</h2><hr>
                                     <div class="ql_tb_dsDeTaiDK ">
                                         <table class="table table-striped table-hover ">
                                             <thead class="thead-default ">

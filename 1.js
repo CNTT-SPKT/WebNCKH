@@ -397,4 +397,26 @@ $(document).ready(function() {
 
 // });
 
+$(function() {
+	$("#btn_Xoa").on("click", function() {
+		var rowCount = $('tbody input').length;
+		var i=0;
+		var temp=0;
+		for(i;i<rowCount;i++)
+		{
+			if($('tbody input').eq(i).is(":checked"))
+			{
+				
+				$('tbody tr').eq(i).hide(2000);
+				temp++;
+			}
+		}
+		if(temp!=0)
+		{
+			setTimeout(function () {
+				alert('Xóa thành công')}, 2000);
+		}
+	});
+});
+
 

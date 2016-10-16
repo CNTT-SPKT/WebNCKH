@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="vendor/bootstrap.js"></script>
 	<script type="text/javascript" src="1.js"></script>
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
 	<link rel="stylesheet" href="vendor/bootstrap.css">
 	<link rel="stylesheet" href="1.css">
 	<link rel="stylesheet" href="vendor/font-awesome.css">
@@ -470,17 +471,17 @@
 													<div class="form-group">
 														<label class="col-sm-2 control-label" for="tendetai">Tên đề tài:</label>
 														<div class="col-sm-10">
-															<input class="form-control" id="tendetai" type="text" value="Nghiên cứu hệ thống nhúng" style="margin-bottom:5px;">
+															<input readonly class="form-control" id="tendetai" type="text" value="Nghiên cứu hệ thống nhúng" style="margin-bottom:5px;">
 														</div>
 														
 														<label class="col-sm-2 control-label" for="mota">Mô tả:</label>
 														<div class="col-sm-10">
-															<textarea name="" id="mota" class="form-control" rows="2" required="required" Nghiên cứu hệ thống nhúng> Nghiên cứu hệ thống nhúng....</textarea>
+															<textarea readonly name="" id="mota" class="form-control" rows="2" required="required" Nghiên cứu hệ thống nhúng> Nghiên cứu hệ thống nhúng....</textarea>
 														</div>
 														<br>
 														<br>
 														<label class="col-sm-2 control-label" for="linhvucnghiencuu">Lĩnh vực nghiên cứu:</label>
-														<div class="col-sm-10" id="linhvucnghiencuu">
+														<div class="col-sm-10" id="linhvucnghiencuu" readonly>
 															<label class="radio-inline"><input type="radio" value="tunhien" name="linhvucnghiencuu" checked="checked"> Tự nhiên</label>
 															<label class="radio-inline"><input type="radio" value="xhnv" name="linhvucnghiencuu">Xã hội nhân văn</label>
 															<label class="radio-inline"><input type="radio" value="giaoduc" name="linhvucnghiencuu">Giáo dục</label>
@@ -492,25 +493,25 @@
 														<br>
 														<br>
 														<label class="col-sm-2 control-label" for="loaihinhnghiencuu">Loại hình nghiên cứu:</label>
-														<div class="col-sm-10" id="loaihinhnghiencuu">
+														<div class="col-sm-10" id="loaihinhnghiencuu" readonly>
 															<label class="radio-inline"><input type="radio" value="coban" name="loaihinhnghiencuu" checked="checked"> Cơ bản:</label>
 															<label class="radio-inline"><input type="radio" value="ungdung" name="loaihinhnghiencuu">Ứng dụng:</label>
 															<label class="radio-inline"><input type="radio" value="trienkhai" name="loaihinhnghiencuu">Triển khai:</label>
 														</div>
 														<br>
 														<br><br>
-														<div class="container" style="margin-top:35px;width:800px">
+														<div class="container" style="margin-top:100px;margin-bottom:5px;width:800px">
 															<div class="row">
 																<label class="col-sm-2 control-label" for="thoigianthuchien">Thời gian thực hiện:</label>
-																<div class="col-sm-10" id="thoigianthuchien">
+																<div class="col-sm-10" id="thoigianthuchien" style="margin-left:-15px">
 																	<div class="row">
-																		<label class="col-sm-2 control-label" for="thoigianbatdau">Từ:</label>
+																		<label class="col-sm-2 control-label" for="thoigianbatdau" >Từ:</label>
 																		<div class="col-sm-4" style="padding:0px">
-																			<input type="date" name="" id="thoigianbatdau" class="form-control" value="" required="required" title="" value="1/1/2015">
+																			<input readonly type="date" name="" id="thoigianbatdau" class="form-control" value="" required="required" title="" value="1/1/2015">
 																		</div>
 																		<label class="col-sm-2 control-label" for="thoigianketthuc">Đến:</label>
 																		<div class="col-sm-4" style="padding:0px">
-																			<input type="date" name="" id="thoigianketthuc" class="form-control" value="" required="required" title="" value="1/1/2016">
+																			<input readonly type="date" name="" id="thoigianketthuc" class="form-control" value="" required="required" title="" value="1/1/2016">
 																		</div>
 																	</div>
 																</div>
@@ -518,7 +519,7 @@
 														</div>
 														<label class="col-sm-2 control-label" for="coquanchutri">Cơ quan chủ trì:</label>
 														<div class="col-sm-10">
-															<input class="form-control" id="tendetai" type="text" placeholder="Khoa/Bộ môn trực thuộc" value="Khoa CNTT">
+															<input readonly class="form-control" id="tendetai" type="text" placeholder="Khoa/Bộ môn trực thuộc" value="Khoa CNTT">
 														</div>
 														<br>
 														<div class="container" style="margin-top:35px;width:800px">
@@ -529,13 +530,13 @@
 																	<div class="row" style="margin-bottom:5px">
 																		<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
 																		<div class="col-sm-8">
-																			<input class="form-control" id="hoten1" type="text" value="Lê Văn A">
+																			<input readonly class="form-control" id="hoten1" type="text" value="Lê Văn A">
 																		</div>
 																	</div>
 																	<div class="row" style="margin-bottom:5px">
 																		<label class="col-sm-4 control-label" for="mssv1">Email:</label>
 																		<div class="col-sm-8">
-																			<input class="form-control" id="mss1" type="text" value="A96@gmail.com">
+																			<input readonly class="form-control" id="mss1" type="text" value="A96@gmail.com">
 																		</div>
 																	</div>
 																</div>
@@ -543,54 +544,54 @@
 															<label class="control-label" for="">Tình hình nghiên cứu trong và ngoài nước:</label><br>
 															<label class="col-sm-2 control-label" for="mota">Trong nước:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<textarea name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
+																<textarea readonly name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
 															</div>
 															<label class="col-sm-2 control-label" for="mota">Ngoài nước:</label><br><br>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<textarea name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
+																<textarea readonly name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
 															</div>
 
 															<label class="col-sm-2 control-label" for="mota">Tính cấp thiết của đề tài:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<textarea name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
+																<textarea readonly name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
 															</div>
 
 															<label class="col-sm-2 control-label" for="mota">Mục tiêu của đề tài:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<textarea name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
+																<textarea readonly name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
 															</div>
 
 															<label class="col-sm-2 control-label" for="mota">Phương pháp và phạm vi nghiên cứu:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<textarea name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
+																<textarea readonly name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
 															</div>
 
 															<label class="col-sm-2 control-label" for="mota">Nội dung nghiên cứu và tiến độ thực hiện:</label>
 															<div class="col-sm-10" style="margin-bottom:5px">
-																<textarea name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
+																<textarea readonly name="" id="mota" class="form-control" rows="3" required="required">Nhằm điều tra khách quan vụ đoàn xe nhân đạo ở Syria, cần đưa ra loại đạn đã bắn trúng xe.</textarea>
 															</div>
 
-															<div class="col-sm-12" style="width:800px">
+															<div class="col-sm-12" style="width:800px;margin-left:-15px">
 																<label class="col-sm-2 control-label" for="thoigianthuchien">Sản phẩm dự kiến:</label>
 																<div class="col-sm-10" style="margin-bottom:5px">
-																	<input class="form-control" id="thoigianthuchien" type="text" style="width:640px" value="Website trực tuyến">
+																	<input readonly class="form-control" id="thoigianthuchien" type="text" style="width:615px" value="Website trực tuyến">
 																</div>
 															</div>
 
-															<div class="container" style="width:800px">
+															<div class="container" style="width:800px;margin-left:-5px">
 																<div class="row">
 																	<label class="col-sm-2 control-label" for="thoigianthuchien">Địa chỉ ứng dụng:</label>
 																	<div class="col-sm-10" id="thoigianthuchien">
-																		<input class="form-control" id="spdukien" type="text" style="width:650px" value="Doanh nghiệp tư nhân">
+																		<input readonly class="form-control" id="spdukien" type="text" style="width:615px" value="Doanh nghiệp tư nhân">
 																	</div>
 																</div>
 															</div>
 
-															<div class="container" style="width:800px">
+															<div class="container" style="width:800px;margin-left:-5px">
 																<div class="row">
 																	<label class="col-sm-2 control-label" for="thoigianthuchien">Đề xuất kinh phí:</label>
 																	<div class="col-sm-10" id="thoigianthuchien">
-																		<input class="form-control" id="spdukien" type="text" style="width:650px" value="5000000">
+																		<input readonly class="form-control" id="spdukien" type="text" style="width:615px" value="5000000">
 																	</div>
 																</div>
 															</div>
@@ -598,7 +599,7 @@
 
 															<label class="col-sm-2 control-label" for="tendetai">Tải file chi tiết:</label>
 															<div class="col-sm-10" style="margin-bottom:10px">
-																<input class="form-control" id="tendetai" type="file">
+																<input readonly class="form-control" id="tendetai" type="file">
 															</div>
 
 
@@ -609,8 +610,20 @@
 										</div>
 									</div>
 								</div>
-								<button type="button" class="btn btn-lg btn-default btn-warning" style="margin-left:300px">Phê duyệt</button>
-								<button type="button" class="btn btn-lg btn-default btn-danger">Không đồng ý</button>
+								<button type="button" id="giangvien_PheDuyet" class="btn btn-lg btn-default btn-warning" style="margin-left:300px">Phê duyệt</button>
+								<button type="button" id="giangvien_KhongDY" class="btn btn-lg btn-default btn-danger">Không đồng ý</button>
+								<script>
+								$(function() {
+									$('#giangvien_PheDuyet').on('click', function() {
+										alert('Phê duyệt thành công');
+										window.location.href = "giangvienPage.html";
+									});
+									$('#giangvien_KhongDY').on('click', function() {
+										alert('Không phê duyệt');
+										window.location.href = "giangvienPage.html";
+									});
+								});
+								</script>
 							</div>
 						</div>
 					</div>

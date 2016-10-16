@@ -206,44 +206,44 @@ $("#formcntt").validate({
 
 //validation cho form gia hạn/ hủy
 
-$(document).ready(function() {
- $("#form_HuyGH").validate({
- 	rules: {
+// $(document).ready(function() {
+//  $("#form_HuyGH").validate({
+//  	rules: {
 
- 		name: "required",
-		mssv: "required",
-		mota:"required",
-		ngay:"required"
+//  		name: "required",
+// 		mssv: "required",
+// 		mota:"required",
+// 		ngay:"required"
  		
- 	},
- 	highlight: function(element) {
-	    var id_attr = "#" + $(element).attr("id") + "1";
-	    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-	  },
-	  unhighlight: function(element) {
-	    var id_attr = "#" + $(element).attr("id") + "1";
-	    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-	  },
-	  errorElement: 'span',
-	  errorClass: 'help-block',
-	  errorPlacement: function(error, element) {
-	    if (element.length) {
-	      error.insertAfter(element);
-	    } else {
-	      error.insertAfter(element);
-	    }
-	  },
+//  	},
+//  	highlight: function(element) {
+// 	    var id_attr = "#" + $(element).attr("id") + "1";
+// 	    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+// 	  },
+// 	  unhighlight: function(element) {
+// 	    var id_attr = "#" + $(element).attr("id") + "1";
+// 	    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+// 	  },
+// 	  errorElement: 'span',
+// 	  errorClass: 'help-block',
+// 	  errorPlacement: function(error, element) {
+// 	    if (element.length) {
+// 	      error.insertAfter(element);
+// 	    } else {
+// 	      error.insertAfter(element);
+// 	    }
+// 	  },
 	  
- 	messages: {
+//  	messages: {
  		
- 		name: "Vui lòng nhập tên của bạn",
-		mssv: "Vui lòng nhập mssv",
-		mota:"Vui lòng nhập lý do",
-		ngay:"Vui lòng chọn gia hạn đến ngày"
+//  		name: "Vui lòng nhập tên của bạn",
+// 		mssv: "Vui lòng nhập mssv",
+// 		mota:"Vui lòng nhập lý do",
+// 		ngay:"Vui lòng chọn gia hạn đến ngày"
  		
- 	}
- });
-});
+//  	}
+//  });
+// });
 // beforeSend: function() {                    
 //     $empty = $('form#orm_HuyGH').find("input").filter(function() {
 //         return this.value === "";
@@ -256,146 +256,142 @@ $(document).ready(function() {
 //     };
 // 	},
 
-// $(document).ready(function() {
+$(document).ready(function() {
 
-//     $.fn.goValidate = function() {
-//         var $form = this,
-//             $inputs = $form.find('input:text, input:password,input:date'),
-//             $selects = $form.find('select'),
-//             $textAreas = $form.find('textarea');
+    $.fn.goValidate = function() {
+        var $form = this,
+            $inputs = $form.find('input:text, input:password'),
+            $selects = $form.find('select'),
+            $textAreas = $form.find('textarea');
 
-//         var validators = {
-//             name: {
-//                 regex: /^[A-Za-z]{2,}$/
-//             },
-//             mssv: {
-//                  regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}/
-//             },
-//             mota: {
-//             	regex: /^(?=\s*\S).*$/,
-//             },
-//             ngay: {
-//             	 regex: /^[2-9]\d{2}-\d{3}-\d{4}$/,
-//             }
-//             // lastName: {
-//             //     regex: /^[A-Za-z]{3,}$/
-//             // },
-//             // town: {
-//             //     regex: /^[A-Za-z]{3,}$/
-//             // },
-//             // postcode: {
-//             //     regex: /^.{3,}$/
-//             // },
-//              //password1: {
-//             //     regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
-//             // },
-//             // password1_repeat: {
-//             //     regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
-//             // },
-//             // email: {
-//             //     regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
-//             // },
-//             // phone: {
-//             //     regex: /^[2-9]\d{2}-\d{3}-\d{4}$/,
-//             // },
-//             // body: {
-//             //     regex: /^.{3,}$/
-//             // },
-//             // country: {
-//             //     regex: /^(?=\s*\S).*$/,
-//             // }
-//         };
-//         var validate = function(klass, value) {
-//             var isValid = true,
-//                 error = '';
+        var validators = {
+            name: {
+                regex: /^[A-Za-z0-9]{2,}$/
+            },
+            mssv: {
+                regex: /^[A-Za-z0-9]{6,}$/
+            },
+            mota: {
+               regex: /^(?=\s*\S).*$/,
+            },
+           
+            ngay: {
+                regex: /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
+            },
+            dxuatkinhphi: {
+                regex: /^[0-9]\d{0,6}$/
+            },
+            // password1: {
+            //     regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+            // },
+            // password1_repeat: {
+            //     regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+            // },
+            email: {
+                regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
+            },
+            // phone: {
+            //     regex: /^[0-9]\d{7,12}$/
+            // },
+            // body: {
+            //     regex: /^.{3,}$/
+            // },
+            // country: {
+            //     regex: /^(?=\s*\S).*$/,
+            // }
+        };
+        var validate = function(klass, value) {
+            var isValid = true,
+                error = '';
 
-//             if (!value && /required/.test(klass)) {
-//                 error = 'This field is required';
-//                 isValid = false;
-//             } else {
-//                 klass = klass.split(/\s/);
-//                 $.each(klass, function(i, k) {
-//                     if (validators[k]) {
-//                         if (value && !validators[k].regex.test(value)) {
-//                             isValid = false;
-//                             error = validators[k].error;
-//                         }
-//                     }
-//                 });
-//             }
-//             return {
-//                 isValid: isValid,
-//                 error: error
-//             }
-//         };
-//         var showError = function($e) {
-//             var klass = $e.attr('class'),
-//                 value = $e.val(),
-//                 test = validate(klass, value);
+            if (!value && /required/.test(klass)) {
+                error = 'This field is required';
+                isValid = false;
+            } else {
+                klass = klass.split(/\s/);
+                $.each(klass, function(i, k) {
+                    if (validators[k]) {
+                        if (value && !validators[k].regex.test(value)) {
+                            isValid = false;
+                            error = validators[k].error;
+                        }
+                    }
+                });
+            }
+            return {
+                isValid: isValid,
+                error: error
+            }
+        };
+        var showError = function($e) {
+            var klass = $e.attr('class'),
+                value = $e.val(),
+                test = validate(klass, value);
 
-//             $e.removeClass('invalid');
-//             $('#form-error').addClass('hide');
+            $e.removeClass('invalid');
+            $('#form-error').addClass('hide');
 
-//             if (!test.isValid) {
-//                 $e.addClass('invalid');
+            if (!test.isValid) {
+                $e.addClass('invalid');
 
-//                 if (typeof $e.data("shown") == "undefined" || $e.data("shown") == false) {
-//                     $e.popover('show');
-//                 }
+                if (typeof $e.data("shown") == "undefined" || $e.data("shown") == false) {
+                    $e.popover('show');
+                }
 
-//             } else {
-//                 $e.popover('hide');
-//             }
-//         };
+            } else {
+                $e.popover('hide');
+            }
+        };
 
-//         $inputs.keyup(function() {
-//             showError($(this));
-//         });
-//         $selects.change(function() {
-//             showError($(this));
-//         });
-//         $textAreas.keyup(function() {
-//             showError($(this));
-//         });
+        $inputs.keyup(function() {
+            showError($(this));
+        });
+        $selects.change(function() {
+            showError($(this));
+        });
+        $textAreas.keyup(function() {
+            showError($(this));
+        });
 
-//         $inputs.on('shown.bs.popover', function() {
-//             $(this).data("shown", true);
-//         });
+        $inputs.on('shown.bs.popover', function() {
+            $(this).data("shown", true);
+        });
 
-//         $inputs.on('hidden.bs.popover', function() {
-//             $(this).data("shown", false);
-//         });
+        $inputs.on('hidden.bs.popover', function() {
+            $(this).data("shown", false);
+        });
 
-//         $form.submit(function(e) {
+        $form.submit(function(e) {
 
-//             $inputs.each(function() { /* test each input */
-//                 if ($(this).is('.required') || $(this).hasClass('invalid')) {
-//                     showError($(this));
-//                 }
-//             });
-//             $selects.each(function() { /* test each input */
-//                 if ($(this).is('.required') || $(this).hasClass('invalid')) {
-//                     showError($(this));
-//                 }
-//             });
-//             $textAreas.each(function() { /* test each input */
-//                 if ($(this).is('.required') || $(this).hasClass('invalid')) {
-//                     showError($(this));
-//                 }
-//             });
-//             if ($form.find('input.invalid').length) { /* form is not valid */
-//                 e.preventDefault();
-//                 $('#form-error').toggleClass('hide');
-//             }
-//         });
-//         return this;
-//     };
+            $inputs.each(function() { /* test each input */
+                if ($(this).is('.required') || $(this).hasClass('invalid')) {
+                    showError($(this));
+                }
+            });
+            $selects.each(function() { /* test each input */
+                if ($(this).is('.required') || $(this).hasClass('invalid')) {
+                    showError($(this));
+                }
+            });
+            $textAreas.each(function() { /* test each input */
+                if ($(this).is('.required') || $(this).hasClass('invalid')) {
+                    showError($(this));
+                }
+            });
+            if ($form.find('input.invalid').length) { /* form is not valid */
+                e.preventDefault();
+                $('#form-error').toggleClass('hide');
+            }
+        });
+        return this;
+    };
 
 
 
-//     $('form').goValidate();
+    $('form').goValidate();
 
-// });
+});
+
 
 $(function() {
 	$("#btn_Xoa").on("click", function() {
@@ -406,7 +402,7 @@ $(function() {
 		{
 			if($('tbody input').eq(i).is(":checked"))
 			{
-				
+
 				$('tbody tr').eq(i).hide(2000);
 				temp++;
 			}

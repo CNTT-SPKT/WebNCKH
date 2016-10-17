@@ -24,12 +24,12 @@ $(window).load(function(){
 // 		document.getElementById("pass-error").style.display='none';
 // 	return true;
 // };
-$(document).ready(function(){
-	$("#btn_GuiDon").click(function(){
-		alert('Gửi đơn đăng ký thành công!');
-	});
+// $(document).ready(function(){
+// 	$("#btn_GuiDon").click(function(){
+// 		alert('Gửi đơn đăng ký thành công!');
+// 	});
 
-});
+// });
 // $function Remove(){
 // 	var f=document.sv_table_thongbao
 // 	if(f.selectAll_ThongBao)
@@ -266,7 +266,7 @@ $(document).ready(function() {
 
         var validators = {
             name: {
-                regex: /^[A-Za-z0-9]{2,}$/
+                regex: /^(?=\s*\S).*$/,
             },
             mssv: {
                 regex: /^[A-Za-z0-9]{6,}$/
@@ -276,7 +276,7 @@ $(document).ready(function() {
             },
            
             ngay: {
-                regex: /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
+                regex: /^(0?[1-9]|[12][0-9]|3[01])-(0?[1-9]|1[012])-((19[0-9]{2})|(20[0-1]{1}[0-4]{1}))$/
             },
             dxuatkinhphi: {
                 regex: /^[0-9]\d{0,6}$/
@@ -289,6 +289,15 @@ $(document).ready(function() {
             // },
             email: {
                 regex: /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/
+            },
+            diem1: {
+                regex: /^(1[0-0]|[0-9])$/
+            },
+            diem2: {
+                regex: /^(1[0-5]|[0-9])$/
+            },
+            diem3: {
+                regex: /^(3[0-5]|[0-9])$/
             },
             // phone: {
             //     regex: /^[0-9]\d{7,12}$/
@@ -415,4 +424,19 @@ $(function() {
 	});
 });
 
-
+$(function() {
+	$('form').submit(function() {
+		var res = true;
+		$("input[type='text'],select,input[type='password']",this).each(function() {
+			if($(this).val().trim() == "") {
+				res = false; 
+			}
+			else
+			{
+				alert('Gửi đơn đăng ký thành công!');
+				res=true;
+			}
+		})
+		return res; 
+	});
+});

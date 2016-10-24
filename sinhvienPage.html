@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<title> Example </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">  
+<html lang="en">
 
-<link rel="stylesheet" href="vendor/bootstrap.css">
-<link rel="stylesheet" href="1.css">
-<link rel="stylesheet" href="vendor/font-awesome.css">
-<script type="text/javascript" src="vendor/bootstrap.js"></script>
-<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="1.js"></script>
-<script type="text/javascript" src="jquery.validate.min.js"></script>
+<head>
+	<title> Sinh Viên Page </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="vendor/bootstrap.js"></script>
+	<link rel="stylesheet" href="vendor/bootstrap.css">
+	<link rel="stylesheet" href="1.css">
+	<script type="text/javascript" src="1.js"></script>
+	<script type="text/javascript" src="jquery.validate.min.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="ng-table.js"></script>
+	<link rel="stylesheet" href="vendor/font-awesome.css">
 </head>
-<body >
+<body>
 	<div class="page">
 		<div class="menu">
 			<div class="row">
@@ -20,7 +22,7 @@
 					<img src="images/skpt_banner_2.jpg" class="img-responsive" alt="Image">
 				</div>
 				<div class="menuBar">
-					<nav class="navbar navbar-default  " role="navigation">
+					<nav class="navbar navbar-default " role="navigation">
 						<div class="container" id="container_menuBar">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -43,160 +45,173 @@
 									<li><a href="#"><span  style="color:blue">Sinh Viên A</span></a></li>
 									<li><a href="mainPage.html">Đăng xuất</a></li>
 								</ul>
-							</div><!-- /.navbar-collapse -->
+							</div>
+							<!-- /.navbar-collapse -->
 						</div>
 					</nav>
 				</div>
-			</div>	
+			</div>
 		</div>
 		<div class="svContent">
 			<div class="row">
 				<div class="col-md-2">
-					<div class="tab-menu">
 					<ul class="nav nav-pills nav-stacked">
-						<li class="active"><a class="list-group-item" href="#thongbao" data-toggle="pill">
+						<li class="active" ><a class="list-group-item" href="#thongbao" data-toggle="pill">
 							<span class="glyphicon glyphicon-home"></span> Thông báo</a>
 						</li>
 						<li style="margin-top:0px;"><a href="#dsDeTai" class="list-group-item" data-toggle="pill">
 							<span class="glyphicon glyphicon-list-alt"></span> Danh sách đề tài</a>
 						</li>
 						<li style="margin-top:0px;"><a href="#dkDeTai" class="list-group-item" data-toggle="pill" style="border-radius:0px;">
-							<span class="glyphicon glyphicon-inbox"></span> Đăng ký đề tài NCKH</a>
-						</li>
+							<span class="glyphicon glyphicon-inbox"></span> Đăng ký đề tài NCKH</a></li>
 						<li style="margin-top:0px;"><a href="#kqNghiemThu" class="list-group-item" data-toggle="pill">
-								<span class="glyphicon glyphicon-check"></span> Kết quả nghiệm thu</a>
-						</li>
+							<span class="glyphicon glyphicon-check"></span> Kết quả nghiệm thu</a></li>
 						<li style="margin-top:0px;"><a href="#ttTaiKhoan" class="list-group-item" data-toggle="pill">
 							<span class="glyphicon glyphicon-user"></span> Thông tin tài khoản</a>
 						</li>
 					</ul>
-					</div>
 				</div>
-						<div class="col-md-10">
-							<div class="tab-content">
-								<div class="tab-pane active" id="thongbao">
-									<div class="row">
-										<div class="svThongBao" style="background:white;height:500px;margin-right:15px;border-radius:3px">
-											<h2 class="tieude_theh">THÔNG BÁO</h2><hr>
-											<div class="sv_table_thongbao">
+				<div class="col-md-10">
+					<div class="tab-content">
+						<div class="tab-pane active" id="thongbao">
+							<div class="row">
+								<div class="svThongBao " style="background:white;height:500px;margin-right:15px;border-radius:3px">
+									<h2 class="tieude_theh" >THÔNG BÁO</h2><hr>
+									<div class="sv_table_thongbao" ng-app="sortApp" ng-controller="mainController">
+										<form>
+											<div class="form-group">
+												<div class="input-group col-xs-8" style="margin-left:150px;" >
+													<div class="input-group-addon"><i class="fa fa-search"></i></div>
+													<input type="text" class="form-control" placeholder="Search da Fish" ng-model="searchFish">
+												</div>      
+											</div>
+										</form>
+										<table class="table table-striped table-hover">
+											<thead>
+												<tr class="success">
+													<th><input type="checkbox" name="" id="selectAll_ThongBao" value=""></th>
+													<th>
+														<a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+															Thông báo
+															<span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+															<span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+														</a>
+													</th>
+													<th>
+														<a href="#" ng-click="sortType = 'fish'; sortReverse = !sortReverse">
+															Người gửi
+															<span ng-show="sortType == 'fish' && !sortReverse" class="fa fa-caret-down"></span>
+															<span ng-show="sortType == 'fish' && sortReverse" class="fa fa-caret-up"></span>
+														</a>
+													</th>
+													<th>
+														<a href="#" ng-click="sortType = 'fish'; sortReverse = !sortReverse">
+															Ngày gửi
+															<span ng-show="sortType == 'fish' && !sortReverse" class="fa fa-caret-down"></span>
+															<span ng-show="sortType == 'fish' && sortReverse" class="fa fa-caret-up"></span>
+														</a>
+													</th>
+													<th>
+														<a href="#" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
+															Chi tiết 
+															<span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
+															<span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+														</a>
+													</th>
+												</tr>
+											</thead>
 
-												<table class="table table-striped table-hover">
-													<thead class="thead-default">
-														<tr class="success">
-															<th><input type="checkbox" name="" id="selectAll_ThongBao" value=""></th>
-															<th>Thông báo</th>
-															<th>Người gửi</th>
-															<th>Ngày gửi</th>	
-															<th>Chi tiết thông báo</th>
-														</tr>
-													</thead>
-													<tbody>
-														<tr >
-															<td><input type="checkbox" name="" value=""></td>
-															<td>Thông báo đề tài gần hết hạn</td>
-															<td>Phòng NCKH</td>
-															<td>12/12/2012</td>
-															<td><a href="sinvien_XemThongBao.html">Xem</a></td>
-														</tr>
-														<tr >
-															<td><input type="checkbox" name=""  value=""></td>
-															<td>Thông báo đề tài được duyệt</td>
-															<td>Phòng NCKH</td>
-															<td>12/12/2012</td>
-															<td><a href="sinvien_XemThongBao.html">Xem</a></td>
-														</tr>
-														<tr >
-															<td><input type="checkbox" name=""  value=""></td>
-															<td>Thông báo đề tài được duyệt</td>
-															<td>Phòng NCKH</td>
-															<td>12/12/2012</td>
-															<td><a href="sinvien_XemThongBao.html">Xem</a></td>
-														</tr>
-													</tbody>
-												</table>
-
-												<script>
-												$('#selectAll_ThongBao').change(function(){
-													if($(this).prop('checked')){
-														$('tbody tr td input[type="checkbox"]').each(function(){
-															$(this).prop('checked', true);
-														});
-													}else{
-														$('tbody tr td input[type="checkbox"]').each(function(){
-															$(this).prop('checked', false);
-														});
-													}
+											<tbody>
+												<tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchFish">
+													<td><input type="checkbox" name=""  value=""></td>
+													<td>{{ roll.tb }}</td>
+													<td>{{ roll.ng }}</td>
+													<td>{{ roll.ngay }}</td>
+													<td><a href="sinvien_XemThongBao.html">Xem</a></td>
+												</tr>
+											</tbody>
+										</table>
+										<script>
+										$('#selectAll_ThongBao').change(function(){
+											if($(this).prop('checked')){
+												$('tbody tr td input[type="checkbox"]').each(function(){
+													$(this).prop('checked', true);
 												});
-												
-												</script>
-											</div>
-											<button type="button" class="btn btn-danger" id="btn_Xoa" style="float:right; margin-right:10px">
-												<span class="glyphicon glyphicon-trash"></span> Xóa thông báo</button>
-											</div>
-										</div>
+											}else{
+												$('tbody tr td input[type="checkbox"]').each(function(){
+													$(this).prop('checked', false);
+												});
+											}
+										});
+										
+										</script>
 									</div>
-									<div class="tab-pane" id="dsDeTai"  >
-										<div class="row" id="ttt">
-											<div class="svdsDeTai" style="background:white;height:500px;margin-right:15px;border-radius:3px">
-												<h2 class="tieude_theh">DANH SÁCH ĐỀ TÀI</h2><hr>
-												<div class="sv_table_dsDeTai">
-													<table class="table table-striped table-hover">
-														<thead class="thead-default">
-															<tr class="success">
-																<th>Mã số</th>
-																<th>Tên đề tài</th>
-																<th>Ngày đăng ký</th>	
-																<th>Hạn nghiệm thu</th>
-																<th>Trạng thái</th>
-																<th>Chi tiết</th>
-																<th>Nộp báo cáo</th>
-																<th>Chức năng</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>null</td>
-																<td>Nghiên cứu hệ thống rung</td>
-																<td>12/12/2012</td>
-																<td>null</td>
-																<td>Đang chờ duyệt</td>
-																<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
-																<td><a href="sinhvien_NopBaoCao.html"><span style="color:gray">Nộp</span></a></td>
-																<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled> Action </a></td>
-															</tr>
-															<tr>
-																<td>141</td>
-																<td>Nghiên cứu hệ thống nhúng</td>
-																<td>12/12/2012</td>
-																<td>13/12/2012</td>
-																<td>Đang thực hiện</td>
-																<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
-																<td><a href="sinhvien_NopBaoCao.html">Nộp</a></td>
-																<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#"> Action </a></td>
-															</tr>
-															<tr>
-																<td>140</td>
-																<td>Nghiên cứu hệ thống an ninh</td>
-																<td>12/12/2012</td>
-																<td>13/12/2012</td>
-																<td>Đã nghiệm thu</td>
-																<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
-																<td><a href="sinhvien_NopBaoCao.html"><span style="color:gray">Nộp</span></a></td>
-																<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled> Action </a></td>
-															</tr>
-														</tbody>
-													</table>
-													<ul id="contextMenu" class="dropdown-menu" role="menu">
-														<li><a tabindex="-1" href="sinhvien_GiaHanDT.html" >Gia Hạn</a></li>
-														<li><a tabindex="-1" href="sinhvien_LyDoHyGHDT.html">Hủy</a></li>
-													</ul>
-												</div>
-
-											</div>
-										</div>
+									<button type="button" class="btn btn-danger" id="btn_Xoa" style="float:right; margin-right:10px">
+										<span class="glyphicon glyphicon-trash"></span> Xóa thông báo</button>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="dsDeTai">
+							<div class="row">
+								<div class="svdsDeTai" style="background:white;height:500px;margin-right:15px;border-radius:3px">
+									<h2 class="tieude_theh">DANH SÁCH ĐỀ TÀI</h2><hr>
+									<div class="sv_table_dsDeTai">
+										<table class="table table-striped table-hover">
+											<thead class="thead-default">
+												<tr class="success">
+													<th>Mã số</th>
+													<th>Tên đề tài</th>
+													<th>Ngày đăng ký</th>
+													<th>Hạn nghiệm thu</th>
+													<th>Trạng thái</th>
+													<th>Chi tiết</th>
+													<th>Nộp báo cáo</th>
+													<th>Chức năng</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>null</td>
+													<td>Nghiên cứu hệ thống rung</td>
+													<td>12/12/2012</td>
+													<td>null</td>
+													<td>Đang chờ duyệt</td>
+													<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
+													<td><a href="sinhvien_NopBaoCao.html"><span style="color:gray">Nộp</span></a></td>
+													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled> Action </a></td>
+												</tr>
+												<tr>
+													<td>141</td>
+													<td>Nghiên cứu hệ thống nhúng</td>
+													<td>12/12/2012</td>
+													<td>13/12/2012</td>
+													<td>Đang thực hiện</td>
+													<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
+													<td><a href="sinhvien_NopBaoCao.html">Nộp</a></td>
+													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#"> Action </a></td>
+												</tr>
+												<tr>
+													<td>140</td>
+													<td>Nghiên cứu hệ thống an ninh</td>
+													<td>12/12/2012</td>
+													<td>13/12/2012</td>
+													<td>Đã nghiệm thu</td>
+													<td><a href="sinhvien_XemCTDT.html">Xem</a></td>
+													<td><a href="sinhvien_NopBaoCao.html"><span style="color:gray">Nộp</span></a></td>
+													<td class="dropdown"><a class="btn btn-default dsDeTai_actionButton" data-toggle="dropdown" href="#" disabled> Action </a></td>
+												</tr>
+											</tbody>
+										</table>
+										<ul id="contextMenu" class="dropdown-menu" role="menu">
+											<li><a tabindex="-1" href="sinhvien_GiaHanDT.html" >Gia Hạn</a></li>
+											<li><a tabindex="-1" href="sinhvien_LyDoHyGHDT.html">Hủy</a></li>
+										</ul>
 									</div>
 
-									
+								</div>
+							</div>
+						</div>
+						
 									<div class="tab-pane" id="dkDeTai">
 										<div class="row" style="margin-right:0px;">
 											<div class="svdkDeTai" style="background:white;border-radius:3px">
@@ -210,7 +225,7 @@
 																	<div class="form-group">
 																		<label class="col-sm-2 control-label" for="tendetai">Tên đề tài:</label>
 																		<div class="col-sm-10" style="margin-bottom:5px">
-																			<input type="text" name="mota" class="form-control required mota" placeholder="Đề tài 1"  id="" required minlength="6" data-placement="right" data-trigger="hover" data-content="Bạn cần phải nhập vào trường này,ít nhất 6 ký tự.">
+																			<input type="text" name="mota" class="form-control required mota" placeholder="Đề tài 1"  id="" required data-placement="right" data-trigger="hover" data-content="Bạn cần phải nhập vào trường này.">
 																		</div>
 																		<label class="col-sm-2 control-label" for="mota">Mô tả:</label>
 																		<div class="col-sm-10">
@@ -267,7 +282,7 @@
 																					<div class="row" style="margin-bottom:5px">
 																						<label class="col-sm-4 control-label" for="hoten1">Họ và tên:</label>
 																						<div class="col-sm-8">
-																							<input type="text" name="name" class="form-control required name" placeholder="Lê Văn A"  id="" required  data-placement="right" data-trigger="hover" data-content="Bạn cần phải nhập vào trường này.">
+																							<input type="text" name="name" class="form-control required name" placeholder="Lê Văn A"  id="" required minlength="3" data-placement="right" data-trigger="hover" data-content="Bạn cần phải nhập vào trường này,ít nhất 3 ký tự.">
 																						</div>
 																					</div>
 																					<div class="row" style="margin-bottom:5px">
@@ -393,36 +408,36 @@
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane" id="kqNghiemThu">
-										<div class="row">
-											<div class="svkqNghiemThu" style="background:white;height:500px;margin-right:15px;border-radius:3px">
-												<h2 class="tieude_theh">KẾT QUẢ NGHIỆM THU</h2><hr>
-												<div class="sv_table_kqNghiemThu">
-													<table class="table table-striped table-hover">
-														<thead class="thead-default">
-															<tr class="success">
-																<th>Mã số đề tài</th>
-																<th>Tên đề tài</th>
-																<th>Ngày đăng ký</th>
-																<th>Ngày nghiệm thu</th>
-																<th>Kết quả chi tiết</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td>141</td>
-																<td>Nghiên cứu hệ thống rung</td>
-																<td>12/12/2012</td>
-																<td>13/12/2012</td>
-																<td><a href="sinhvien_ketqua.html">Xem</a></td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-											</div>
-										</div>
+						<div class="tab-pane" id="kqNghiemThu">
+							<div class="row">
+								<div class="svkqNghiemThu" style="background:white;height:500px;margin-right:15px;border-radius:3px">
+									<h2 class="tieude_theh">KẾT QUẢ NGHIỆM THU</h2><hr>
+									<div class="sv_table_kqNghiemThu">
+										<table class="table table-striped table-hover">
+											<thead class="thead-default">
+												<tr class="success">
+													<th>Mã số đề tài</th>
+													<th>Tên đề tài</th>
+													<th>Ngày đăng ký</th>
+													<th>Ngày nghiệm thu</th>
+													<th>Kết quả chi tiết</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>141</td>
+													<td>Nghiên cứu hệ thống rung</td>
+													<td>12/12/2012</td>
+													<td>13/12/2012</td>
+													<td><a href="sinhvien_ketqua.html">Xem</a></td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
-									<div class="tab-pane" id="ttTaiKhoan">
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane" id="ttTaiKhoan">
 										<div class="row">
 											<div class="svttTaiKhoan" style="background:white;height:500px;margin-right:15px;border-radius:3px">
 												<h2 class="tieude_theh">THÔNG TIN TÀI KHOẢN</h2><hr>
@@ -515,7 +530,7 @@
 																			<div class="modal-body">
 																				<div class="row">
 																					<div class="title " style=" text-align:center; margin-bottom:15px;">
-																						<h2> CẬP NHẬP THÔNG TIN </h2>
+																						<h2> CẬP NHẬT THÔNG TIN </h2>
 																					</div>
 																				</div>
 																				<div class="row">
@@ -532,7 +547,7 @@
 																							<div class="form-group has-feedback" style="margin-left:20px;">
 																								<div class="col-xs-11">
 																									<label for="email">Mail<span>:</span></label> 
-																									<input class="form-control" name="email" id="email" type="text" required/>
+																									<input class="form-control" name="email" id="email" type="email" required/>
 																									<span class="glyphicon form-control-feedback" id="email1"></span>
 																								</div>
 																							</div>
@@ -576,19 +591,21 @@
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
+					</div>
 					</div>
 				</div>
-				<div id='bttop'>
-					<img src="images/backtotop.png" alt="backtotop" width="50px" height="50px">
-				</div>
-				<footer>
+			</div>
+		</div>
+	</div>
+	<div id='bttop'>
+		<img src="images/backtotop.png" alt="backtotop" width="50px" height="50px">
+	</div>
+	<footer>
 
-					<pre>Copyright@ Phòng nghiên cứu khoa học và quan hệ quốc tế
-					</pre>
+		<pre>Copyright@ Phòng nghiên cứu khoa học và quan hệ quốc tế
+		</pre>
 
-				</footer>
-			</body>
-			</html>
+	</footer>
+</body>
+
+</html>

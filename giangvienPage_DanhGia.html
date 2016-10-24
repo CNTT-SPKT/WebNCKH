@@ -504,15 +504,14 @@
 														<td><input type="text" name="diem1" class="form-control required diem1" id="" required min="0" max="10" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-10."></td>
 													</tr>
 													<tr>
-														<td>Điểm thướng</td>
+														<td>Điểm thưởng</td>
 														<td>10</td>
 														<td><input type="text" name="diem1" class="form-control required diem1" id="" required min="0" max="10" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-10."></td>
 													</tr>
 													<tr>
-														<td></td>
+														<td>Tổng điểm</td>
 														<td>100</td>
-														<td><input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title=""></td>
-
+														<td><input type="text" name="diem4" id="input" class="form-control required diem4" value="" required="required" min="0" max="100" pattern="" title="" data-content="Vui lòng nhập vào ký tự số từ 0-100." data-placement="left" data-trigger="hover"></td>
 													</tr>
 												</tbody>
 											</table>
@@ -521,6 +520,19 @@
 												<textarea type="text" name="mota" class="form-control required mota" placeholder="tạo 1 website bán hàng"  id="" required  data-placement="right" data-trigger="hover" data-content="Bạn cần phải nhập vào trường này" rows="4" required></textarea>
 											</div>
 											<button type="submit" class="btn-info" value="Submit" style="float:right;height:40px; width:100px;margin:20px 10px 0px 0px;">Đánh giá</button>
+											<script>
+												$(function() {
+													$('#formNghiemThu button:submit').on('click', function(e) {
+														var emptyTextBoxes = $('#formNghiemThu input').filter(function() { return this.value == ""; });
+													if(emptyTextBoxes.length == 0)
+													{
+														alert("Đánh giá thành công!");
+														e.preventDefault(); 
+														window.location.href = "giangvienPage.html";
+													}
+													});
+												});
+											</script>
 										</form>
 									</div>
 							</div>
@@ -531,7 +543,7 @@
 				</div>
 			</div>
 		</div>
-			<div id='bttop'>
+		<div id='bttop'>
 			<img src="images/backtotop.png" alt="backtotop" width="50px" height="50px">
 		</div>
 		<footer style="margin-bottom:0px;margin-top:10px;">

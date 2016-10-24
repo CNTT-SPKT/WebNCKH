@@ -204,57 +204,6 @@ $("#formcntt").validate({
 });
 });
 
-//validation cho form gia hạn/ hủy
-
-// $(document).ready(function() {
-//  $("#form_HuyGH").validate({
-//  	rules: {
-
-//  		name: "required",
-// 		mssv: "required",
-// 		mota:"required",
-// 		ngay:"required"
- 		
-//  	},
-//  	highlight: function(element) {
-// 	    var id_attr = "#" + $(element).attr("id") + "1";
-// 	    $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-// 	  },
-// 	  unhighlight: function(element) {
-// 	    var id_attr = "#" + $(element).attr("id") + "1";
-// 	    $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-// 	  },
-// 	  errorElement: 'span',
-// 	  errorClass: 'help-block',
-// 	  errorPlacement: function(error, element) {
-// 	    if (element.length) {
-// 	      error.insertAfter(element);
-// 	    } else {
-// 	      error.insertAfter(element);
-// 	    }
-// 	  },
-	  
-//  	messages: {
- 		
-//  		name: "Vui lòng nhập tên của bạn",
-// 		mssv: "Vui lòng nhập mssv",
-// 		mota:"Vui lòng nhập lý do",
-// 		ngay:"Vui lòng chọn gia hạn đến ngày"
- 		
-//  	}
-//  });
-// });
-// beforeSend: function() {                    
-//     $empty = $('form#orm_HuyGH').find("input").filter(function() {
-//         return this.value === "";
-//     });
-//     if($empty.length) {
-//         alert('You must fill out all fields in order to submit a change');
-//         return false;
-//     }else{
-//         return true;
-//     };
-// 	},
 
 $(document).ready(function() {
 
@@ -298,6 +247,9 @@ $(document).ready(function() {
             },
             diem3: {
                 regex: /^(3[0-5]|[0-9])$/
+            },
+            diem4: {
+            	regex: /^(10[0-0]|[0-9])$/
             },
             // phone: {
             //     regex: /^[0-9]\d{7,12}$/
@@ -440,3 +392,5 @@ $(function() {
 		return res; 
 	});
 });
+
+

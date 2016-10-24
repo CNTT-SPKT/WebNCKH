@@ -99,87 +99,89 @@
                 </div>
                 <div class="col-md-10">
                     <div class="tab-content">
-                        <div class="tab-pane active" id="DanhGia">
+                       <div class="tab-pane active" id="DanhGia">
                             <div class="row">
-                                <div class="ql_DanhGia" style="background:white;height:870px;margin-right:15px;border-radius:3px">
-                                    <h2 class="tieude_theh">NGHIỆM THU</h2>
+                            <div class="gv_DanhGia" style="background:white;height:850px;margin-right:15px;border-radius:3px;overflow:auto;">
+                                <h2 class="tieude_theh">NGHIỆM THU</h2><hr>
                                     <div class="ad_table_qltk" style="margin:15px 5px 0px 5px;">
-                                        <table class="table table-striped table-hover">
-                                            <thead class="thead-default">
-                                                <tr class="success">
-                                                    <th>Nội dung đánh giá</th>
-                                                    <th>Điểm tối đa</th>
-                                                    <th>Điểm đánh giá</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Tổng quan tình hình và lý do chọn đề tài</td>
-                                                    <td>10</td>
-                                                    <td><input type="text" id="input" class="form-control" required="required"></td>
+                                        <form id="formNghiemThu">
+                                            <table class="table table-striped table-hover">
+                                                <thead class="thead-default">
+                                                    <tr class="success">
+                                                        <th>Nội dung đánh giá</th>
+                                                        <th>Điểm tối đa</th>
+                                                        <th>Điểm đánh giá</th>  
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr  >
+                                                        <td>Tổng quan tình hình và lý do chọn đề tài</td>
+                                                        <td>10</td>
+                                                        <td><input type="text" name="diem1" class="form-control required diem1" id="" required min="0" max="10" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-10."></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mục tiêu đề tài</td>
+                                                        <td>15</td>
+                                                        <td><input type="text" name="diem2" class="form-control required diem2" id="" required min="0" max="15" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-15."></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <td>Mục tiêu đề tài</td>
-                                                    <td>15</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Phương pháp nghiên cứu</td>
+                                                        <td>15</td>
+                                                        <td><input type="text" name="diem2" class="form-control required diem2" id="" required min="0" max="15" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-15."></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <td>Phương pháp nghiên cứu</td>
-                                                    <td>15</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"
-                                                            pattern="" title=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nội dung khoa học</td>
+                                                        <td>35</td>
+                                                        <td><input type="text" name="diem3" class="form-control required diem3" id="" required min="0" max="35" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-35."></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Đóng góp cho KT-XH-GD</td>
+                                                        <td>10</td>
+                                                        <td><input type="text" name="diem1" class="form-control required diem1" id="" required min="0" max="10" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-10."></td>
 
-                                                </tr>
-                                                <tr>
-                                                    <td>Nội dung khoa học</td>
-                                                    <td>35</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"
-                                                            pattern="" title=""></td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Đóng góp cho KT-XH-GD</td>
-                                                    <td>10</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"
-                                                            pattern="" title=""></td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Hình thức báo cáo tổng kết</td>
-                                                    <td>10</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"
-                                                            pattern="" title=""></td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>Điểm thướng</td>
-                                                    <td>10</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"
-                                                            pattern="" title=""></td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td></td>
-                                                    <td>100</td>
-                                                    <td><input type="text" name="" id="input" class="form-control" value="" required="required"
-                                                            pattern="" title=""></td>
-
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hình thức báo cáo tổng kết</td>
+                                                        <td>10</td>
+                                                        <td><input type="text" name="diem1" class="form-control required diem1" id="" required min="0" max="10" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-10."></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Điểm thưởng</td>
+                                                        <td>10</td>
+                                                        <td><input type="text" name="diem1" class="form-control required diem1" id="" required min="0" max="10" data-placement="left" data-trigger="hover" data-content="Vui lòng nhập vào ký tự số từ 0-10."></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tổng điểm</td>
+                                                        <td>100</td>
+                                                        <td><input type="text" name="diem4" id="input" class="form-control required diem4" value="" required="required" min="0" max="100" pattern="" title="" data-content="Vui lòng nhập vào ký tự số từ 0-100." data-placement="left" data-trigger="hover"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <label class="col-sm-2 control-label" for="mota">Ý kiến đánh giá</label><br>
+                                            <div class="col-sm-12">
+                                                <textarea type="text" name="mota" class="form-control required mota" placeholder="tạo 1 website bán hàng"  id="" required  data-placement="right" data-trigger="hover" data-content="Bạn cần phải nhập vào trường này" rows="4" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn-info" value="Submit" style="float:right;height:40px; width:100px;margin:20px 10px 0px 0px;">Đánh giá</button>
+                                            <script>
+                                                $(function() {
+                                                    $('#formNghiemThu button:submit').on('click', function(e) {
+                                                        var emptyTextBoxes = $('#formNghiemThu input').filter(function() { return this.value == ""; });
+                                                    if(emptyTextBoxes.length == 0)
+                                                    {
+                                                        alert("Đánh giá thành công!");
+                                                        e.preventDefault(); 
+                                                        window.location.href = "giangvienPage.html";
+                                                    }
+                                                    });
+                                                });
+                                            </script>
+                                        </form>
                                     </div>
-                                    <label class="col-sm-2 control-label" for="mota">Ý kiến đánh giá</label><br>
-                                    <div class="col-sm-12">
-                                        <textarea name="" id="mota" class="form-control" rows="4" required="required"></textarea>
-                                    </div>
-                                    <button type="submit" value="Submit" style="float:right;height:40px; width:100px;background:#E6F1D8; border: 2px solid #C8E2B1;border-radius:5px; margin:20px 10px 0px 0px;">Đánh giá</button>
-                                </div>
                             </div>
                         </div>
-
+                        </div>
                         <div class="tab-pane" id="postThongBao">
                             <div class="row">
                                 <div class="clposthongbao" style="overflow:auto; background:white;height:600px;margin-right:15px;border-radius:3px">
